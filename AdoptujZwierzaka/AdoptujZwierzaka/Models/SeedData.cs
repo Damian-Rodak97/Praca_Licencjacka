@@ -36,9 +36,30 @@ namespace AdoptujZwierzaka.Models
                     new Pet
                     {
                         Name = "Perła",
-                        Description = "Kot ma 2 lata i jest bardzo aktywna.",
+                        Description = "Kotka ma 2 lata i jest bardzo aktywna.",
                         Category = "Kot",
                         AddDate = DateTime.Parse("12/30/2011 09:33:26")
+                    },
+                    new Pet
+                    {
+                        Name = "Alex",
+                        Description = "Pies ma 3 lata i jest bardzo aktywna.",
+                        Category = "Pies",
+                        AddDate = DateTime.Parse("01/13/2015 19:32:14")
+                    },
+                    new Pet
+                    {
+                        Name = "Cezar",
+                        Description = "Kot ma rok i jest bardzo leniwy.",
+                        Category = "Kot",
+                        AddDate = DateTime.Parse("03/12/2014 02:13:14")
+                    },
+                    new Pet
+                    {
+                        Name = "Kropka",
+                        Description = "Pies ma roczek i jest bardzo leniwy.",
+                        Category = "Pies",
+                        AddDate = DateTime.Parse("06/28/2017 13:12:13")
                     }
                     );
                 context.SaveChanges();

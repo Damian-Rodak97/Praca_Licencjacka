@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.EntityFrameworkCore;
 using AdoptujZwierzaka.Data;
 using AdoptujZwierzaka.Models;
+using Microsoft.AspNetCore.Routing.Template;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -60,6 +61,11 @@ namespace AdoptujZwierzaka
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapControllerRoute(
+                    name: "pagination",
+                    pattern: "Pets/Strona{PetPage}",
+                    defaults: new {Controller = "Pet", action = "List"});
+                endpoints.MapRazorPages();
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Pet}/{action=List}/{id?}");

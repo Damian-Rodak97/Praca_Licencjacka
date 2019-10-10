@@ -9,5 +9,6 @@ namespace AdoptujZwierzaka.Models.ViewModels
     {
         public IEnumerable<Pet> Pets { get; set; }
         public PagingInfo PagingInfo { get; set; }
+        public string CurrentCategory { get; set; }
     }
 }

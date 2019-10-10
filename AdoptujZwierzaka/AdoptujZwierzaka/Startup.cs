@@ -62,12 +62,27 @@ namespace AdoptujZwierzaka
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
-                    name: "pagination",
-                    pattern: "Pets/Strona{PetPage}",
-                    defaults: new {Controller = "Pet", action = "List"});
+                    name: "null",
+                    pattern: "{category}/Strona{petPage:int}",
+                    defaults: new { controller = "Pet", action = "List" });
                 endpoints.MapRazorPages();
                 endpoints.MapControllerRoute(
-                    name: "default",
+                    name: "null",
+                    pattern: "Strona{petPage:int}",
+                    defaults: new { controller = "Pet", action = "List", petPage = 1 });
+                endpoints.MapRazorPages();
+                endpoints.MapControllerRoute(
+                    name: "null",
+                    pattern: "{category}",
+                    defaults: new {controller = "Pet", action = "List", petPage = 1 });
+                endpoints.MapRazorPages();
+                endpoints.MapControllerRoute(
+                    name: "null",
+                    pattern: "",
+                    defaults: new { controller = "Pet", action = "List", petPage = 1 });
+                endpoints.MapRazorPages();
+                endpoints.MapControllerRoute(
+                    name: "null",
                     pattern: "{controller=Pet}/{action=List}/{id?}");
                 endpoints.MapRazorPages();
                 SeedData.EnsurePetsOperation(app);

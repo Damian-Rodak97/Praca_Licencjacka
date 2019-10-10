@@ -18,10 +18,11 @@ namespace AdoptujZwierzaka.Controllers
             repository = repo;
         }
 
-        public ViewResult List(int petPage = 1) 
+        public ViewResult List(string category, int petPage = 1) 
             => View(new PetsListViewModel
         {
             Pets = repository.Pets
+                .Where(p=> category == null || p.Category == category)
                 .OrderBy(p => p.ID)
                 .Skip((petPage - 1) * PageSize)
                 .Take(PageSize),
@@ -29,9 +30,9 @@ namespace AdoptujZwierzaka.Controllers
             {
                 CurrentPage = petPage,
                 ItemsPerPage = PageSize,
-                TotalItems = repository.Pets.Count()
-            }
-
+                TotalItems = category == null ? repository.Pets.Count() : repository.Pets.Where(e => e.Category == category).Count()
+            },
+            CurrentCategory = category
         });
     }
 }

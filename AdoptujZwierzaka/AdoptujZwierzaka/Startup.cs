@@ -69,7 +69,7 @@ namespace AdoptujZwierzaka
                 endpoints.MapControllerRoute(
                     name: "null",
                     pattern: "Strona{petPage:int}",
-                    defaults: new { controller = "Pet", action = "List", petPage = 1 });
+                    defaults: new {controller = "Pet", action = "List", petPage = 1});
                 endpoints.MapRazorPages();
                 endpoints.MapControllerRoute(
                     name: "null",
@@ -79,14 +79,14 @@ namespace AdoptujZwierzaka
                 endpoints.MapControllerRoute(
                     name: "null",
                     pattern: "",
-                    defaults: new { controller = "Pet", action = "List", petPage = 1 });
+                    defaults: new {controller = "Pet", action = "List", petPage = 1});
                 endpoints.MapRazorPages();
                 endpoints.MapControllerRoute(
                     name: "null",
                     pattern: "{controller=Pet}/{action=List}/{id?}");
                 endpoints.MapRazorPages();
-                SeedData.EnsurePetsOperation(app);
             });
+            SeedData.EnsurePetsOperation(app);
         }
     }
 }

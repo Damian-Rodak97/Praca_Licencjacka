@@ -17,6 +17,35 @@ namespace AdoptujZwierzaka.Controllers
             repository = repo;
 
         }
+
         public ViewResult Index() => View(repository.Pets);
+
+        public ViewResult Edit(int petId) => View(repository.Pets.FirstOrDefault(p => p.ID == petId));
+        [HttpPost]
+        public IActionResult Edit(Pet pet)
+        {
+            if (ModelState.IsValid) {
+                repository.SavePet(pet);
+                TempData["message"] = $"Zapisano {pet.Name}."; 
+                return RedirectToAction("Index"); }
+            else
+            { 
+                // Błąd w wartościach danych.
+                 return View(pet);
+            }
+        }
+
+        public ViewResult Create() => View("Edit", new Pet());
+        [HttpPost] 
+        public IActionResult Delete(int petId) 
+        { 
+            Pet deletedPet = repository.DeletePet(petId);
+            if (deletedPet != null)
+            {
+                TempData["message"] = $"Usunięto {deletedPet.Name}.";
+            }
+           
+            return RedirectToAction("Index");
+        }
     }
 }

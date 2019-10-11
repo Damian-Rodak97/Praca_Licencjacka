@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 using AdoptujZwierzaka.Data;
 
@@ -34,8 +35,18 @@ namespace AdoptujZwierzaka.Models
                     dbEntryPet.Category = pet.Category;
                 }
             }
-
             context.SaveChanges();
+        }
+        public Pet DeletePet(int petId)
+        {
+            Pet dbEntryPet = context.Pets
+                .FirstOrDefault(p => p.ID == petId);
+            if (dbEntryPet != null)
+            {
+                context.Pets.Remove(dbEntryPet); 
+                context.SaveChanges();
+            }
+            return dbEntryPet;
         }
     }
 }

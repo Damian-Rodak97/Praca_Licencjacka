@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.EntityFrameworkCore;
 using AdoptujZwierzaka.Data;
 using AdoptujZwierzaka.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing.Template;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -49,18 +50,17 @@ namespace AdoptujZwierzaka
             else
             {
                 app.UseExceptionHandler("/Home/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-            app.UseHttpsRedirection();
-            app.UseStaticFiles();
-            app.UseRouting();
 
+            app.UseHttpsRedirection();
+            app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();
-
+            app.UseStaticFiles();
+            
             app.UseEndpoints(endpoints =>
-            {
+            { 
                 endpoints.MapControllerRoute(
                     name: "null",
                     pattern: "{category}/Strona{petPage:int}",
@@ -83,8 +83,8 @@ namespace AdoptujZwierzaka
                 endpoints.MapRazorPages();
                 endpoints.MapControllerRoute(
                     name: "null",
-                    pattern: "{controller=Pet}/{action=List}/{id?}");
-                endpoints.MapRazorPages();
+                    pattern: "{controller}/{action}/{id?}");
+                    endpoints.MapRazorPages();
             });
             SeedData.EnsurePetsOperation(app);
         }

@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace AdoptujZwierzaka.Models
 {
-    public class FakePetRepository : IPetRepository
+    public class FakePetRepository /* :  IPetRepository */
     {
         public IQueryable<Pet> Pets => new List<Pet>
         {

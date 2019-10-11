@@ -8,5 +8,6 @@ namespace AdoptujZwierzaka.Models
     public interface IPetRepository
     {
         IQueryable<Pet> Pets { get; }
+        void SavePet(Pet pet);
     }
 }

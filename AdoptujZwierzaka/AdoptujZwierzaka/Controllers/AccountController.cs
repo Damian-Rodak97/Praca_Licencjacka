@@ -36,10 +36,11 @@ namespace AdoptujZwierzaka.Controllers
         }
 
         public ViewResult Create() => View("Edit", new Pet());
+
         [HttpPost] 
-        public IActionResult Delete(int petId) 
+        public IActionResult Delete(Pet pet) 
         { 
-            Pet deletedPet = repository.DeletePet(petId);
+            Pet deletedPet = repository.DeletePet(pet);
             if (deletedPet != null)
             {
                 TempData["message"] = $"Usunięto {deletedPet.Name}.";

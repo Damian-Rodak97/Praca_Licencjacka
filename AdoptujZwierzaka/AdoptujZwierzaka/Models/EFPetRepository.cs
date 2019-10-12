@@ -37,10 +37,10 @@ namespace AdoptujZwierzaka.Models
             }
             context.SaveChanges();
         }
-        public Pet DeletePet(int petId)
+        public Pet DeletePet(Pet pet)
         {
             Pet dbEntryPet = context.Pets
-                .FirstOrDefault(p => p.ID == petId);
+                .FirstOrDefault(p => p.ID == pet.ID);
             if (dbEntryPet != null)
             {
                 context.Pets.Remove(dbEntryPet); 

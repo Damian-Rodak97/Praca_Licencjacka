@@ -12,6 +12,6 @@ namespace AdoptujZwierzaka.Models
 
         void SavePet(Pet pet);
 
-        Pet DeletePet(int petId);
+        Pet DeletePet(Pet pet);
     }
 }

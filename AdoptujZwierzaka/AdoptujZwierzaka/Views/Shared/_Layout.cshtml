@@ -1,46 +1,171 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - AdoptujZwierzaka</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/assets/css/iconfont.css">
+    <link rel="stylesheet" href="~/assets/css/isotope.css">
+    <link rel="stylesheet" href="~/assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="~/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="~/assets/css/animate.css">
+    <!--For Plugins external css-->
+    <link rel="stylesheet" href="~/assets/css/plugins.css" />
+
+    <!--Theme custom css -->
+    <link rel="stylesheet" href="~/assets/css/style.css">
+
+    <!--Theme Responsive css-->
+    <link rel="stylesheet" href="~/assets/css/responsive.css" />
 </head>
 <body>
-    <header>
-    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-        <div class="container">
-            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">AdoptujZwierzaka</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                <partial name="_LoginPartial" />
-                <ul class="navbar-nav flex-grow-1">
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Pet" asp-action="List">Ads</a>
-                    </li>
-                </ul>
+    <!-- header section -->
+    <header class="xs-header xs-nav-box">
+        <div class="xs-logo-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 xs-logo-wraper">
+                        <a class="nav-brand" asp-controller="Home" asp-action="Index">
+                            <img src="~/assets/images/logo.png" alt="">
+                        </a>
+                    </div><!-- .xs-logo-wraper END -->
+                    <div class="col-md-7 row xs-header-widget no-mobile">
+
+                        <partial name="_LoginPartial" />
+                    </div>
+                </div>
             </div>
         </div>
-    </nav>
-    </header>
-<div class="col-9">
-    @RenderBody()
-</div>
-<footer class="border-top footer text-muted">
+        @if (SignInManager.IsSignedIn(User))
+        {
+            <div class="xs-nav-down nav-down">
+                <div class="container">
+                    <nav class="xs-menus">
+                        <div class="nav-header">
+                            <div class="nav-toggle"></div>
+                            <a href="index.html" class="nav-logo">
+                                <img src="assets/images/logo.png" alt="">
+                            </a>
+                        </div>
+                        <div class="nav-menus-wrapper">
+                            <ul class="nav-menu">
+                                <li><a asp-area="" asp-controller="Account" asp-action="Index">Add Ad</a></li>
+                                <li><a asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Profile</a></li>
+                                <li><form asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new {area = ""})"><button type="submit" class="btn btn-secondary btn-success"></button></form></li>
+                            </ul><!-- .nav-menu END -->
+                        </div><!-- .nav-menus-wrapper .row END -->
+                    </nav>
+                </div>
+            </div>
+        }
+        else
+        {
+            <div class="xs-nav-down nav-down">
+                <div class="container">
+                    <nav class="xs-menus">
+                        <div class="nav-header">
+                            <div class="nav-toggle"></div>
+                            <a href="index.html" class="nav-logo">
+                                <img src="assets/images/logo.png" alt="">
+                            </a>
+                        </div>
+                        <div class="nav-menus-wrapper">
+                            <ul class="nav-menu">
+                                <li><a asp-area="" asp-controller="Pet" asp-action="List" asp-route-category="Pies">Psy do adopcji</a></li>
+                                <li><a asp-area="" asp-controller="Pet" asp-action="List" asp-route-category="Kot">Koty do adopcji</a></li>
+                                <li><a asp-area="Identity" asp-page="/Account/Register">Rejestracja</a></li>
+                                <li><a asp-area="Identity" asp-page="/Account/Login">Zaloguj</a></li>
+                            </ul><!-- .nav-menu END -->
+                        </div><!-- .nav-menus-wrapper .row END -->
+                    </nav>
+                </div>
+            </div>
+        }
+    </header><!-- End header section -->
+    <!-- banner section -->
+    <section class="xs-banner xs-bg" style="background-image: url('assets/images/header.jpg')">
+        <div class="container">
+            <div class="row xs-banner-wraper">
+                <div class="col-md-12">
+                    <div class="xs-banner-content">
+                        <h1 class="xs-banner-title">Adoptuj zwierzaka fizycznie lub wirtualnie</h1>
+                        <p class="lead">Ponad 140 zwierzaków czeka na Twoje wsparcie. Adoptuj zwierzaki w schronisku lub wspieraj je zdalnie.</p>
+                    </div><!-- .xs-banner-content END -->
+                </div>
+            </div><!-- .row END -->
+        </div><!-- .container END -->
+    </section><!-- End banner section -->
+    <div class="container-fluid">
+        <div class="search_welcome">
+            <form action="/zwierzeta-do-adopcji" method="GET" class="form-inline">
+                <input class="form-control tippy-click ui-autocomplete-input" id="pet_town" type="search" placeholder="Cała Polska lub wpisz miasto" aria-label="Search" name="pet_town" data-tippy-content="Wpisz miasto, np. Warszawa" autocomplete="off">
+                <button class="btn btn-outline-success" type="submit" name="pet_type" value="1">
+                    <i class="flaticon flaticon-dog"></i>
+                    Znajdź psa
+                </button>
+                <button class="btn btn-outline-success" type="submit" name="pet_type" value="2">
+                    <i class="flaticon flaticon-cat"></i>
+                    Znajdź kota
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Stary header>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">AdoptujZwierzaka</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <partial name="_LoginPartial"/>
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Pet" asp-action="List">Ads</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header> -->
+
+    <div class="col-9">
+        @RenderBody()
+    </div>
+    <footer class="border-top footer text-muted">
         <div class="container">
             &copy; 2019 - AdoptujZwierzaka - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
+
+    <script src="~/assets/js/jquery-3.2.1.min.js"></script>
+    <script src="~/assets/js/plugins.js"></script>
+    <script src="~/assets/js/bootstrap.min.js"></script>
+    <script src="~/assets/js/isotope.pkgd.min.js"></script>
+    <script src="~/assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="~/assets/js/owl.carousel.min.js"></script>
+    <script src="~/assets/js/jquery.waypoints.min.js"></script>
+    <script src="~/assets/js/spectragram.min.js"></script>
+    <script src="~/assets/js/jquery.easypiechart.min.js"></script>
+    <script src="~/assets/js/skrollr.min.js"></script>
+    <script src="~/assets/js/jquery.ajaxchimp.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyCy7becgYuLwns3uumNm6WdBYkBpLfy44k"></script>
+    <script src="assets/js/main.js"></script>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

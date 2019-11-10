@@ -1,0 +1,56 @@
+/* Feature Details section */
+.xs-feature-details {
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: contain;
+	padding-top: 50px;
+	position: relative;
+	.container {
+		position: relative;
+		z-index: 1;
+	}
+}
+
+.xs-featureDetails-content {
+	padding-top: 90px;
+	.xs-title {
+		letter-spacing: -2.3px;
+		margin-bottom: 35px;
+	}
+	.xs-unorder-list {
+		li {
+			margin-bottom: 20px;
+		}
+	}
+}
+
+.mettinh-poople-bg {
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 100%;
+	width: 50%;
+	@include background-content;
+}
+
+/* Title style underline */
+.xs-title-underline {
+	font-size: em(82px);
+	font-weight: 700;
+	line-height: 1;
+	margin-bottom: 0;
+	border-bottom: 4px solid #04d2c8;
+	padding-bottom: 14px;
+	color: #04d2c8;
+	text-indent: 3px;
+}
+
+/* Service grow */
+.xs-service-grow {
+	margin-bottom: 40px;
+	h4 {
+		font-size: em(28px);
+		margin-bottom: 0;
+		color: $color-secondary;
+	}
+}

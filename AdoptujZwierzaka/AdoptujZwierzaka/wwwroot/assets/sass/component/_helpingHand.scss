@@ -1,0 +1,64 @@
+.xs-helping-hand-content {
+	p {
+		color: #8098af;
+		margin-bottom: 35px;
+	}
+}
+
+$bg: isWhite;
+.xs-round-info {
+	@include equal-size(466px);
+	margin-left: auto;
+	@include flex-position(flex, center, center);
+	position: relative;
+	border-radius: 100%;
+	@if $bg == "isWhite" {
+		background-color: $color-white;
+	} @else {
+		background-color: #f8f8f8;
+	}
+	h4 {
+		text-align: center;
+		font-size: em(46px);
+		color: #344a5f;
+		font-weight: 300;
+		margin-bottom: 0px;
+		strong {
+			font-weight: 700;
+			color: $color-ternary;
+			font-family: $bodyFont;
+			line-height: 1;
+		}
+	}
+	.round-content {
+		padding: 0 93px;	
+	}
+	.xs-round-icons {
+		$extra: 36px;
+		position: absolute;
+		@include equal-size(calc(100% + #{$extra}));
+		top: -($extra / 2);
+		left: -($extra / 2);
+		background-image: url("../images/round-icons.png");
+		@include background-content;
+		animation-duration: 5s;
+		animation-fill-mode: both;
+		animation-iteration-count: infinite;
+		animation-name: pulse;
+		animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+		backface-visibility: hidden;
+		pointer-events: none;
+	}
+}
+
+@keyframes pulse {
+	from {
+		transform: scale3d(1, 1, 1);
+	}
+	50% {
+		transform: scale3d(.95, .95, .95);
+	}
+	to {
+		transform: scale3d(1, 1, 1);
+	}
+}

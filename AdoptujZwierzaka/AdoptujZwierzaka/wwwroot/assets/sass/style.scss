@@ -1,0 +1,166 @@
+/*
+Table of contents
+
+1. reset list
+2. element list
+3. prelaoder
+4. Navigation
+5. Banner
+6. About
+7. Vertical tabs for index
+8. Service
+9. Children
+10. Funfact
+11. Feature Details
+12. Video popup
+13. Domestic Adaption
+14. News Feeds
+15. Adopt Family Album
+16. Client Section
+17. Footer Section
+18. Widgets
+19. Inner welcome
+20. Service promo
+21. Team Setion
+22. Call to action
+23. happy family
+24. contact
+25. donation form
+26. portfolio
+27. contact details
+28. vertical tabs for FAQ
+29. news letters
+30. helping hand
+31. pricing
+32. baby info corner
+33. event
+34. adoption feature
+35. donate children
+36. children gallery
+37. other components
+38. short class list
+
+*/ 
+
+// var list
+@import 'variable/variable';
+
+// mixing
+@import 'mixing/mixing';
+
+// function
+@import 'function/function';
+
+/*====================== 1. reset list ============================*/
+@import 'reset/predefine';
+
+/*======================= 2. element list ===========================*/
+@import 'element/element';
+
+/*=========================== 3. prelaoder =============================*/
+@import 'component/preloader';
+
+/*======================== 4. Navigation ===============================*/
+@import 'component/nav';
+
+/*======================= 5. Banner =============================*/
+@import 'component/banner';
+
+/*============================= 6. About ===============================*/
+@import 'component/about';
+
+/*============================= 7. Vertical tabs for index =================================*/
+@import 'component/vTabs';
+
+/*==================================== 8. Service =====================*/
+@import 'component/service';
+
+/*==================================== 9. Children ===========================*/
+@import 'component/children';
+
+/*======================= 10. Funfact ================================*/
+@import 'component/funFact';
+
+/*============================= 11. Feature Details =============================*/
+@import 'component/featureDetails';
+
+/*================================== 12. Video popup ===============================*/
+@import 'component/videoPopup';
+
+/*================================ 13. Domestic Adaption =====================================*/
+@import 'component/domesticAdaption';
+
+/*===================================== 14. News Feeds ===============================*/
+@import 'component/newsFeeds';
+
+/*========================================== 15. Adopt Family Album =============================*/
+@import 'component/adoptFamily';
+
+/*==================================== 16. Client Section ====================================*/
+@import 'component/client';
+
+/*====================================== 17. Footer Section =======================================*/
+@import 'component/footer';
+
+/*========================================= 18. Widgets ======================================*/
+@import 'component/widget';
+
+/*============================================ 19. Inner welcome ==============================*/
+@import 'component/innerWelcome';
+
+/*====================================== 20. Service promo ==================================*/
+@import 'component/servicePromo';
+
+/*================================== 21. Team Setion =============================*/
+@import 'component/team';
+
+/*==================================== 22. Call to action =======================*/
+@import 'component/callToAction';
+
+/*======================================= 23. happy family =====================================*/
+@import 'component/happyFamily';
+
+/*============================================== 24. contact ======================================*/
+@import 'component/contact';
+
+/*============================================== 25. donation form ==============================*/
+@import 'component/donationForm';
+
+/*=========================================== 26. portfolio ================================*/
+@import 'component/portfolio';
+
+/*=============================== 27. contact details ====================================*/
+@import 'component/contactDetails';
+
+/*================================ 28. vertical tabs for FAQ ========================*/
+@import 'component/verticalTabs';
+
+/*================================= 29. news letters ==================================*/
+@import 'component/newsLetter';
+
+/*=========================================== 30. helping hand ========================*/
+@import 'component/helpingHand';
+
+/*=========================================== 31. pricing ===================================*/
+@import 'component/pricing';
+
+/*======================================== 32. baby info corner ==============================*/
+@import 'component/babyInfoCorner';
+
+/*=========================================== 33. event ==========================================*/
+@import 'component/event';
+
+/*============================================ 34. adoption feature ==================================*/
+@import 'component/adoptionFeature';
+
+/*================================================= 35. donate children ==================================*/
+@import 'component/dontaeChildren';
+
+/*============================================ 36. children gallery ====================================*/
+@import 'component/childGallery';
+
+/*========================================== 37. other components ================================*/
+@import 'component/other';
+
+/*========================================== 38. short class list ===============================*/
+@import 'reset/inheritance';

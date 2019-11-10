@@ -1,0 +1,32 @@
+/* Video pop up content */
+.xs-video-popup-wraper {
+	padding-top: 30px;
+	.xs-video-popup {
+		margin-bottom: 40px;
+	}
+	.xs-title {
+		margin-bottom: 20px;
+	}
+	p {
+		margin-bottom: 30px;
+	}
+}
+
+/* video popup content */
+.xs-video-popup-section {
+	margin-top: -133px;
+}
+.xs-video-popup-wraper {
+	&.version-2 {
+		padding-top: 0px;
+		position: relative;
+		box-shadow: $secondary-shadow;
+		.xs-video-popup {
+			margin-bottom: 0px;
+		}
+	}
+	.xs-video-popup-content  {
+		position: absolute;
+		@include center-position(50%);
+	}
+}

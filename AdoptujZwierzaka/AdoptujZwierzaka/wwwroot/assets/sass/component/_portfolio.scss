@@ -1,0 +1,110 @@
+/* gutter space (you need space type space or type nospace) */
+$spacer: space;
+/* icon position (you change hover icon position just type bottom to center or you dont need this just type no icon) */
+$position: bottom;
+/* if hover is here (you not need hover just type isTrue to isFalse) */
+$overlay: overlay;
+/* if shadow here (you not need hover just type shadow to noshadow) */
+$shadow: shadow;
+/* if hover content is here (you not need hover just type active to inactive) */
+$hoverContent: active;
+
+$hover: isTrue;
+/* if overlay true (you not need hover just type overlay to nooverlay) */
+
+.portfolio-section {
+	.watermark-bg {
+		left: 0;
+		right: inherit;
+	}
+}
+
+.portfolio-section,
+.xs-events {
+	position: relative;
+	background-repeat: no-repeat;
+	background-position: center right 30px;
+}
+
+.xs-portfolio-grid {
+	position: relative;
+	z-index: 1;
+	.xs-portfolio-grid-item {
+		@if $spacer == "space" {
+			padding: 15px;
+		} @else {
+			padding: 0px;
+		}
+	}
+	.xs-single-portfolio-item {
+		display: block;
+		position: relative;
+		overflow: hidden;
+		@if $shadow == "shadow" {
+			box-shadow: $primary-shadow;
+		} @else {
+			box-shadow: none;
+		}
+		@if $hover == "isTrue" {	
+			@if $overlay == overlay {
+				&::before {
+					position: absolute;
+					content: "";
+					top: 0;
+					left: 0;
+					height: 100%;;
+					width: 100%;
+					background-color:rgba($color: #81256f, $alpha: .8);
+					@include transition;
+					opacity: 0;
+				}
+			} @else {
+				&::before {
+					display: none;
+				}
+			}
+			@if $hoverContent == "active" {
+				.protfolio-hover-content {
+					position: absolute;
+					opacity: 0;
+					@if $position == "bottom" {
+						bottom: -100px;
+						left: 0%;
+						opacity: 0;
+					} @else if $position == "center" {
+						top: 60%;
+						left: 50%;
+						transform: translate(-50%, -50%)
+					}
+					padding: 30px;
+					@include transition;
+					i {
+						font-size: em(40px);
+						color: $color-white;
+					}
+				}
+			} @else {
+				.protfolio-hover-content {
+					display: none;
+				}
+			}
+			&:hover {
+				&::before {
+					opacity: 1;
+				}
+				.protfolio-hover-content {
+					opacity: 1;
+					@if $position == "bottom" {
+						bottom: 0;
+					} @else if $position == "center" {
+						top: 50%;
+					}
+				}
+			}
+		} @else {
+			.protfolio-hover-content {
+				display: none;
+			}
+		}
+	}
+}

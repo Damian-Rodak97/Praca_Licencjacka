@@ -1,0 +1,79 @@
+/* funfacts version 1 */
+.xs-funfact-section {
+	position: relative;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: contain;
+}
+.xs-single-funFact {
+	text-align: center;
+	font-family: $fontAlt;
+	line-height: 1;
+	.xs-funfactIcon {
+		margin-bottom: 25px;
+		min-height: 80px;
+		@include flex-position(flex,center,flex-end);
+	}
+	span {
+		font-size: em(42px);
+		color: $color-primary;
+		display: block;
+		font-weight: 700;
+		margin-bottom: 18px;
+	}
+	small {
+		font-size: em(22px);
+	}
+}
+
+.version-pet {
+	.xs-single-funFact {
+		span {
+			color: $color-eggBlue;
+		}
+	}
+}
+
+/* funfacts version 2 */
+.xs-funfact-section-v2 {
+	position: relative;
+	@extend .xs-bg;
+	padding: 100px 0;
+	.xs-heading {
+		margin-bottom: 64px;
+		text-align: left;
+		.xs-title {
+			line-height: 1.2;
+			margin-bottom: 0;
+			color: $color-white;
+			font-family: $bodyFont;
+		}
+	}
+	.xs-overlay {
+		opacity: .5;
+	}
+}
+.xs-single-funFact {
+	&.funFact-v2 {
+		position: relative;
+		z-index: 1;
+		text-align: center;
+		color: $color-white;
+		i {
+			display: block;
+			font-size: em(70px);
+			margin-bottom: 30px;
+		}
+		span {
+			font-size: em(36px);
+			display: inline-block;
+			margin-bottom: 0;
+			color: $color-white;
+		}
+		small {
+			font-size: em(22px);
+			padding-left: 9px;
+			font-family: $bodyFont;
+		}
+	}
+}

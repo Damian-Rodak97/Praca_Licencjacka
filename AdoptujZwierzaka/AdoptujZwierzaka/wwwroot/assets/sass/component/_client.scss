@@ -1,0 +1,33 @@
+.xs-client-section {
+	background-color: $color-primary;
+	.xs-client-slider-item {
+		min-height: 148px;
+		display: inline-flex;
+		align-items: center;
+		padding: 30px;
+		cursor: all-scroll;
+		img {
+			opacity: .4;
+			@include transition;
+			backface-visibility: hidden;
+		}
+		&:hover {
+			img {
+				opacity: 1;
+			}
+		}
+	}
+	&.version-2 {
+		background-color: transparent;
+		margin-bottom: 80px;
+		.xs-client-slider {
+			border-bottom: 1px solid #6cb714;
+		}
+		.xs-client-slider-item {
+			padding: 20px;
+		}
+	}
+	&.version-3 {
+		background-color: #294056;
+	}
+}

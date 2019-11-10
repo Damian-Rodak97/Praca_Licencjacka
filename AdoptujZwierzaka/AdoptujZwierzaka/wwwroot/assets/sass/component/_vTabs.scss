@@ -1,0 +1,79 @@
+.xs-v-nav-pills {
+	position: relative;
+	padding-top: 15px;
+    padding-bottom: 15px;
+	&::before {
+		position: absolute;
+		content: "";
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 6px;
+		background-color: #ececec;
+		border-radius: 3px;
+	}
+	.nav-item {
+		.nav-link {
+			font-size: em(14px);
+			font-weight: 700;
+			text-transform: capitalize;
+			color: $bcolor;
+			padding: 20px 29px;
+			line-height: 1;
+			@include transition;
+			position: relative;
+			&::before {
+				position: absolute;
+				content: "";
+				left: 0;
+				top: 0;
+				height: 100%;
+				width: 6px;
+				background-color: $color-primary;
+				border-radius: 3px;
+				@include transition;
+				opacity: 0;
+			}
+			&:hover ,
+			&.active {
+				box-shadow: $secondary-shadow;
+				background-color: $color-white;
+				&::before {
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
+
+.fadeIn {
+	animation: fadein 1.5s both;
+	backface-visibility: hidden; 
+}
+
+  
+@keyframes fadein {
+	from {
+		opacity: 0; 
+	}
+	to {
+		opacity: 1;
+	} 
+}
+
+.xs-v-tab-content {
+	.xs-chart {
+		margin-bottom: 12px;
+	}
+	h4 {
+		margin-bottom: 18px;
+		font-size: em(20px);
+		color: $color-primary;
+	}
+}
+
+.xs-service-feature-content {
+	.xs-v-nav-pills {
+		margin-top: 40px;
+	}
+}

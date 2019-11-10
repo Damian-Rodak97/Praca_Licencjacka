@@ -1,0 +1,137 @@
+.xs-newsletter-content {
+	background-color: $color-primary;
+	color: $color-white;
+	position: relative;
+	padding: 70px;
+	overflow: hidden;
+	margin-top: -130px;
+	h5 {
+		font-size: em(22px);
+		font-weight: 600;
+		margin-bottom: 25px;
+	}
+	/* watermark icon */
+	.icon-watermark {
+		position: absolute;
+		right: -70px;
+		top: -26px;
+		font-size: em(400px);
+		opacity: .2;
+	}
+}
+$inputFiledHeight: 70px;
+$buttonWidth: 224px;
+.xs-newsletter-form {
+	height: $inputFiledHeight;
+	position: relative;
+	z-index: 1;
+	display: flex;
+	input:not([type="submit"]) {
+		border-radius: 0px;
+		border: 2px solid rgba($color-white, .6);
+		height: 100%;
+		background-color: rgba($color-white, .2);
+		margin-bottom: 0;
+		border-right: 0;
+		padding-left: 28px;
+
+		&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+			color: $color-white;
+			font-size: em(16px);
+		}
+		&::-moz-placeholder { /* Firefox 19+ */
+			color: $color-white;
+			font-size: em(16px);
+		}
+		&:-ms-input-placeholder { /* IE 10+ */
+			color: $color-white;
+			font-size: em(16px);
+		}
+		&:-moz-placeholder { /* Firefox 18- */
+			color: $color-white;
+			font-size: em(16px);
+		}
+	}
+	[type="submit"] {
+		height: 100%;
+		min-width: $buttonWidth;
+		background-color: $color-secondary;
+		border: 0;
+		color: $color-white;
+		font-size: em(12px);
+		font-weight: 700;
+		text-transform: uppercase;
+		padding: 10px;
+		cursor: pointer;
+		@include transition;
+		&:hover {
+			background-color: darken($color: $color-secondary, $amount: 10%);
+		}
+		i {
+			padding-right: 5px;
+		}
+	}
+	&.round {
+		$inputFiledHeight: 65px;
+		height: $inputFiledHeight;
+		display: block;
+		input:not([type="submit"]) {
+			background-color: $color-white;
+			border: 0px;
+			padding-left: 31px;
+		}
+		input:not([type="submit"]),
+		[type="submit"] {
+			border-radius: 32.5px;
+		}
+		[type="submit"] {
+			position: absolute;
+			right: 8px;
+			top: 50%;
+			transform: translateY(-50%);
+			height: calc(100% - 14px);
+			min-width: 180px;
+		}
+		label {
+			position: absolute;
+			top: -25px;
+			left: 0;
+			margin-bottom: 0;
+			font-weight: 700;
+		}
+	}
+}
+  
+/* news letter version 2 */ 
+.newsletter-text {
+	color: $color-white;
+	margin-bottom: 30px;
+	h3, h4 {
+		margin-bottom: 0px;
+	}
+	h3 {
+		font-size: em(30px);
+		font-weight: 300;
+	}
+	h4 {
+		font-size: 2.8em;
+	}
+}
+
+.newsletter-cotnent {
+	color: $color-white;
+	h3 {
+		font-size: em(30px);
+		letter-spacing: -.8px;
+		margin-bottom: 15px;
+	}
+	p {
+		font-weight: 500;
+		margin-bottom: 30px;
+	}
+}
+.xs-newsletter-section {
+	&.version-2 {
+		margin-bottom: 210px;
+	}
+}

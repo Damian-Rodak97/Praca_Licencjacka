@@ -1,0 +1,79 @@
+.xs-donation-form-wraper {
+	padding-left: 30px;
+	.xs-heading {
+		p {
+			margin-bottom: 25px;
+		}
+		span {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.xs-donation-form-images {
+	box-shadow: $secondary-shadow;
+}
+
+.donate-form-section {
+	position: relative;
+	.row {
+		position: relative;
+		z-index: 1;
+	}
+}
+
+.xs-donation-form {
+	.xs-input-group {
+		margin-bottom: 30px;
+	}
+	label {
+		display: block;
+		margin-bottom: 15px;
+		color: $color-primary;
+		font-weight: 700;
+		line-height: 1;
+		font-family: $fontAlt;
+	}
+	.form-control {
+		margin-bottom: 0;
+	}
+	input:not([type="submit"]) ,
+	select {
+		border: 2px solid rgba($color: #c8c8c8, $alpha: .3);
+		height: 60px !important;
+		border-radius: 0;
+		@include transition;
+		padding: 0 29px;
+		width: calc(100% - 55px);
+		&:focus {
+			background-color: $color-white;
+			border: 2px solid #c8c8c8;
+		}
+	}
+	::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+		color: #666666;
+		font-size: em(14px);
+	}
+	::-moz-placeholder { /* Firefox 19+ */
+		color: #666666;
+		font-size: em(14px);
+	}
+	:-ms-input-placeholder { /* IE 10+ */
+		color: #666666;
+		font-size: em(14px);
+	}
+	:-moz-placeholder { /* Firefox 18- */
+		color: #666666;
+		font-size: em(14px);
+	}
+	select {
+		appearance: none;
+		background-image: url(../images/select_arrow.png);
+		background-repeat: no-repeat;
+		background-position: right 27px center;
+		option {
+			color: #666666;
+			font-size: em(14px);
+		}
+	}
+}  

@@ -1,0 +1,22 @@
+/* Call to action */ 
+.xs-call-to-action-section {
+	position: relative;
+	padding: 130px 0;
+	@extend .xs-bg;
+	text-align: center;
+	.xs-title {
+		margin-bottom: 0;
+	}
+	.xs-overlay {
+		opacity: .6;
+	}
+}
+
+/* Call to action version 2 */ 
+.xs-call-to-action-v2 {
+	position: relative;
+	padding: 198px 0;
+	.xs-title {
+		margin-bottom: 50px;
+	}
+}

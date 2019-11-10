@@ -1,0 +1,58 @@
+.xs-children-section {
+	padding-bottom: 100px;
+	position: relative;
+	.row {
+		position: relative;
+		z-index: 1;
+	}
+	.watermark-bg {
+		left: 0;
+		right: inherit;
+	}
+}
+.xs-single-children {
+	box-shadow: $primary-shadow;
+	background-color: $color-white;
+	margin-bottom: 30px;
+}
+.xs-height-separetor {
+	height: 30px;
+	clear: both;
+}
+.xs-children-details {
+	padding: 30px;
+	text-align: center;
+	a {
+		display: inline-block;
+		font-size: em(26px);
+		font-weight: 700;
+		color: $color-primary;
+		letter-spacing: -.3px;
+		line-height: 1.3;
+		margin-bottom: 9px;
+		font-family: $fontAlt;
+	}
+	h5 {
+		margin-bottom: 0;
+		font-size: em(14px);
+		font-weight: 400;
+	}
+}
+.xs-children-header {
+	position: relative;
+	span {
+		position: absolute;
+		right: 20px;
+		top: 20px;
+	}
+}
+
+/* Children badge Pill */
+.xs-children-header {
+	.badge {
+		&.badge-pill {
+			font-size: em(14px);
+			padding: 15px 20px;
+		}
+	}
+}

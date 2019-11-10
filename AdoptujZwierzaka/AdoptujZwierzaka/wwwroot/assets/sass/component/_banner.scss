@@ -1,0 +1,127 @@
+.xs-banner,
+.xs-banner-wraper {
+	min-height: 900px;
+}
+
+.xs-banner {
+	&.banner-v2 {
+		min-height: 700px;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		.xs-banner-title,
+		.xs-banner-sub-title {
+			color: #344a5f;
+			font-size: em(64px);
+			font-weight: 300;
+			margin-bottom: 0px;
+		}
+		.xs-banner-sub-title {
+			font-weight: 700;
+			margin-bottom: 25px;
+		}
+		.lead {
+			font-size: em(20px);
+			color: #8098af;
+		}
+	}
+	&.banner-v3 {
+		position: relative;
+		display: flex;
+		align-items: center;
+		background-attachment: fixed;
+		min-height: 800px;
+		.xs-banner-content {
+			position: relative;
+			z-index: 1;
+			text-align: center;
+			.xs-banner-sub-title ,
+			.xs-banner-title {
+				color: $color-white;
+			}
+			.xs-banner-sub-title {
+				font-size: em(26px);
+				font-weight: 400;
+				margin-bottom: 0px;
+			}
+			.xs-banner-title {
+				font-size: em(82px);
+				margin-bottom: 40px;
+			}
+			.btn {
+				background-color: #17bec3;
+				font-size: em(12px);
+				font-weight: 600;
+				box-shadow: none;
+				&:hover {
+					background-color: darken($color: #17bec3, $amount: 15%);
+				}
+			}
+		}
+	}
+}
+
+.xs-banner-wraper {
+	align-items: center;
+	.xs-banner-image {
+		height: 100%;
+		align-self: flex-end;
+	}
+}
+.xs-banner-title {
+	color: $color-primary;
+	font-size: em(72px);
+	letter-spacing: -3px;
+	margin-bottom: 25px;
+	line-height: 1.13;
+}
+.xs-banner-content {
+	p {
+		margin-bottom: 40px;
+	}
+	&.banner-round {
+		position: relative;
+		z-index: 1;
+		&::before {
+			position: absolute;
+			content: "";
+			bottom: -112px;
+			left: -98px;
+			border-radius: 120px;
+			height: 240px;
+			width: 100vw;
+			background-color: $color-white;
+			box-shadow: $secondary-shadow;
+			z-index: -1;
+		}
+	}
+}
+
+/* banner animation keyframes */
+.banner-slider {
+	position: relative;
+	.owl-nav {
+		.owl-next,
+		.owl-prev {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			z-index: 99;
+		}
+		.owl-next {
+			right: 30px;
+		}
+		.owl-prev {
+			left: 30px;
+		}
+	}
+	.xs-round-nav {
+		background-color: $color-primary;
+		color: $color-white;
+		&:hover {
+			background-color: $color-gray;
+			color: $color-primary;
+		}
+	}
+}
+@import '../element/_bnnerAnim.scss';

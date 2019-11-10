@@ -1,0 +1,48 @@
+.xs-events {
+	position: relative;
+	.container {
+		position: relative;
+		z-index: 1;
+	}
+}
+.xs-single-event {
+	[class^="col-"] + [class^="col-"] {
+		padding-top: 10px;
+	}
+	margin-bottom: 30px;
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+$edHeight: 80px;
+.event-meta-date {
+	display: inline-block;
+	min-height: $edHeight;
+	min-width: $edHeight;
+	text-align: center;
+	padding: 13px 10px;
+	color: $color-white;
+	font-size: em(32px);
+	font-weight: 700;
+	line-height: 1;
+	margin-bottom: 15px;
+	small {
+		display: block;
+		font-size: 0.500em;
+		margin-top: 5px;
+	}
+}
+.event-title {
+	font-size: em(20px);
+	margin-bottom: 15px;
+	a {
+		color: #344a5f;
+	}
+}
+.event-content {
+	p {
+		color: #8098af;
+		margin-bottom: 0;
+	}
+}

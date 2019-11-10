@@ -1,0 +1,59 @@
+.xs-team-section {
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: contain;
+}
+.xs-single-team {
+	text-align: center;
+	position: relative;
+	z-index: 2;
+}
+.xs-team-content {
+	position: relative;
+	min-height: 140px;
+	padding-left: 10px;
+	padding-right: 10px;
+	@include flex-position(inline-flex, center, center);
+	flex-direction: column;
+	z-index: 1;
+	color: $color-white;
+	margin-top: -55px;
+	width: 100%;
+	.xs-svgs {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		z-index: -1;
+		filter: drop-shadow(8px 0px 16px rgba(0, 0, 0, 0.2));
+	}
+	h4 {
+		margin-bottom: 10px;
+		font-size: em(22px);
+	}
+	small {
+		font-size: em(14px);
+		letter-spacing: -.2px;
+	}
+}
+
+/* Svg fill list */
+svg {
+	fill-rule: evenodd;
+}
+// first color name and second your color
+$fill-list: (red, #fa575d),
+			(purple, #9064bf),
+			(blue, #379ff4),
+			(orange, #fe813a),
+			(riptide, #92d5ce),
+			(yellow, #f7a900),
+			(green, #2cc391),
+			(navy-blue, #011b58);
+
+@each $colorNmae, $color in $fill-list {
+	.fill-#{$colorNmae} {
+		fill:  $color;
+	}
+}

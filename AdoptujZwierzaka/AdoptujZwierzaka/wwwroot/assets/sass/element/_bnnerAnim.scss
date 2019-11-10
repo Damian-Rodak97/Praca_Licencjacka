@@ -1,0 +1,49 @@
+.banner-slider {
+    .owl-item {
+        &.active {
+            .xs-banner-content {
+                .xs-banner-title,
+                .xs-banner-sub-title ,
+                .lead ,
+                .btn {
+                    animation: animInLeft 1s ease 0s both;
+                }
+                .xs-banner-sub-title {
+                    animation-delay: .3s;
+                }
+                .lead {
+                    animation-delay: .5s;
+                }
+                .btn {
+                    animation-delay: .7s;
+                    + .btn {
+                        animation-delay: .9s;
+                        animation-name: animInRight;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes animInLeft {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes animInRight {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}

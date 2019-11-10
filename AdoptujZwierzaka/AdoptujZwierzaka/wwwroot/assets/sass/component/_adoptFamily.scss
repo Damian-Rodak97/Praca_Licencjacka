@@ -1,0 +1,33 @@
+.slider-wating-to-adopt {
+	position: relative;
+	.owl-nav {
+		position: absolute;
+		top: -140px;
+		right: 15px;
+		display: flex;
+	}
+	.owl-prev {
+		margin-right: 20px;
+	}
+}
+.xs-single-adopt-family {
+	padding: 15px;
+	img {
+		box-shadow: $secondary-shadow;
+		margin-bottom: 30px;
+	}
+	.star-rating {
+		margin-bottom: 10px;
+	}
+}
+.content-title {
+	margin-bottom: 0;
+	font-size: em(22px);
+	a {
+		color: $color-primary;
+	}
+}
+
+.xs-adopt-family-section {
+	position: relative;
+}

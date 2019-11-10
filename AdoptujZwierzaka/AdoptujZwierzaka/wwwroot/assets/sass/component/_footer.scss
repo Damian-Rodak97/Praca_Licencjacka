@@ -1,0 +1,261 @@
+.xs-footer-section {
+    background-image: url('../images/backgrounds/doodle-bg-3.png');
+    background-repeat: no-repeat;
+    background-position: top 100px center;
+    background-size: contain;
+    &.footer-version-2 {
+        position: relative;
+        z-index: 1;
+        .tree-shape {
+            position: absolute;
+            top: 0;
+            // left: -100px;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            .footer-img {
+                position: absolute;
+                bottom: 0;
+                left: 100px;
+            }
+        }
+    }
+    &.footer-version-primary {
+        .xs-client-section.version-3 {
+            background-color: #7a1e68;
+        }
+        .xs-footerTop.footertop-v3 {
+            background-color: $color-primary;
+        }
+        .xs-copyright-content.version-3 {
+            background-color: #6e1b5e;
+        }
+        .xs-social-list.version-3 > li > a {
+            background-color: #6e1b5e;
+        }
+        .xs-footerTop.footertop-v3 .xs-recent-post-widget li .post-info .post-meta .entry-date i,
+        .xs-footerTop.footertop-v3 .xs-recent-post-widget li .post-info .post-meta .entry-date a {
+            color: #d695c9;
+        }
+        .xs-copyright-content.version-3 p {
+            color: #d393c7;
+        }
+        .xs-copyright-content.version-3 .xs-back-to-top {
+            box-shadow: none;
+        }
+    }
+}
+
+.xs-footerTop {
+    padding-top: 100px;
+    &.footertop-v3 {
+        background-color: #344a5f;
+        padding-bottom: 100px;
+        color: $color-white;
+        .xs-recent-post-widget li .post-info .entry-title a ,
+        .footer-widget .widget-title ,
+        .xs-unorder-list li a {
+            color: $color-white;
+        }
+        .xs-unorder-list li a {
+            font-weight: 500;
+        }
+        .xs-recent-post-widget li .post-info .post-meta .entry-date a, 
+        .xs-recent-post-widget li .post-info .post-meta .entry-date i, 
+        .xs-recent-post-widget li .post-info .post-meta .entry-comment i,
+        .xs-recent-post-widget li .post-info .post-meta .entry-comment a {
+            color: #657d93;
+        }
+    }
+}
+
+.footer-description {
+    padding-right: 20px;
+    .xs-footer-logo {
+        display: inline-block;
+        margin-bottom: 40px;
+    }
+    p {
+        margin-bottom: 30px;
+    }
+}
+
+.footer-widget {
+    .widget-title {
+        font-size: em(22px);
+        color: $color-primary;
+        margin-bottom: 35px;
+    }
+    .xs-unorder-list {
+        li {
+            margin-bottom: 15px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            &:before {
+                color: $color-primary;
+                font-size: em(12px);
+                line-height: 1;
+                margin-top: 8px;
+            }
+        }
+    }
+    .post-meta {
+        span {
+            margin-right: 30px;
+            &:last-child {
+                margin-right: 0px;
+            }
+        }
+    }
+    &.widget-v2 {
+        .widget-title {
+            color: #344a5f;
+            margin-bottom: 20px;
+        }
+        .xs-unorder-list {
+            li {
+                a {
+                    color: #8098af;
+                    font-family: $bodyFont;
+                    font-size: em(16px);
+                    font-weight: 400;
+                }
+            }
+        }
+        .xs-recent-post-widget {
+            li {
+                .posts-thumb {
+                    margin-right: 10px;
+                }
+                .entry-title {
+                    a {
+                        color: #8098af;
+                    }
+                    letter-spacing: -.5px;
+                    font-weight: 500;
+                    font-family: $bodyFont;
+                }
+            }
+        }
+    }
+}
+
+/* Footer Bottom */
+.xs-footerBottom {
+    position: relative;
+    .xs-svg-shape-bg {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+}
+.xs-family-img-footer {
+   margin: 100px 0;
+   img {
+       width: 400px;
+   }
+}
+.xs-copyright-content {
+    padding: 40px 0;
+    border-top: 1px solid #a64292;
+    position: relative;
+    text-align: center;
+    p {
+        margin-bottom: 0;
+        color: #d393c7;
+        font-family: $fontAlt;
+        font-weight: 700;
+        line-height: 1;
+        a {
+            color: $color-white;
+        }
+    }
+    &.version-3 {
+        padding: 40px 0;
+        border-top: 0px;
+        background-color: #294056;
+        text-align: left;
+        p {
+            color: #657d93;
+        }
+        .container {
+            position: relative;
+        }
+        .xs-back-to-top {
+            background-color: rgba($color: #000000, $alpha: .2);
+        }
+        .xs-back-to-top-wraper {
+            top: -17px;
+        }
+    }
+}
+  
+.xs-back-to-top-wraper {
+    position: absolute;
+    right: 0;
+}
+  
+.xs-back-to-top {
+    @include equal-size-lineHeight(50px);
+    text-align: center;
+    display: inline-block;
+    box-shadow: $secondary-shadow;
+    background-color: rgba($color-black, .1);
+    border-radius: 100%;
+    color: $color-white;
+    font-size: em(20px);
+    @include transition;
+    &:hover {
+        color: $color-white;
+    }
+    &.version-2 {
+        font-size: em(24px);
+        background-color: $color-primary;
+        @include equal-size-lineHeight(60px);
+        box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.2);
+        &:hover {
+            background-color: darken($color-primary, 10%);
+        }
+    }
+}
+  
+.xs-path{
+    fill-rule:evenodd;
+    clip-rule:evenodd;
+    fill: $color-primary;
+}
+.xs-child-path-1{
+    fill:#4B823D;
+}
+.xs-child-path-2{
+    fill:#6FB259;
+}
+
+/* fotter version 2 */
+.footer-widget-group {
+    padding-bottom: 68px;
+}
+.xs-footerBottom-v2 {
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: initial;
+    .xs-copyright-content {
+        border-top: 1px solid #f1f1f1;
+        p {
+            line-height: 1;
+            text-align: left;
+            color: #344a5f;
+            a {
+                color: $color-ternary;
+            }
+        }
+    }
+    .xs-back-to-top-wraper {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}

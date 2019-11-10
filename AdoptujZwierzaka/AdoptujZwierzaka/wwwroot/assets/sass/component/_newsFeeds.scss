@@ -1,0 +1,61 @@
+.xs-news-feed-grid-item {
+	padding: 15px;
+	max-width: 100%;
+}
+.xs-single-news-feed {
+	box-shadow: $primary-shadow;
+	position: relative;
+	overflow: hidden;
+	border-radius: 10px;
+	&::before ,
+	&::after{
+		position: absolute;
+		content: "";
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background-image: linear-gradient(to top, rgba(129, 37, 111, .6) 0%, rgba(65, 19, 56, 0.5) 30%, transparent 100%);
+		@include transition;
+	}
+	&::after {
+		background-image: linear-gradient(to top, rgba(129, 37, 111, .8) 30%, rgba(65, 19, 56, 0.5) 72%, transparent 100%);
+		opacity: 0;
+	}
+	&:hover {
+		&::before {
+			opacity: 0;
+		}
+		&::after {
+			opacity: 1;
+		}
+	}
+	.entry-meta,
+	.entry-title {
+		position: absolute;
+		left: 0;
+		width: 100%;
+		padding: 40px 30px;
+		z-index: 2;
+	}
+	.entry-meta {
+		top: 0;
+	}
+	.entry-title {
+		bottom: 0;
+	}
+	.entry-title {
+		margin-bottom: 0;
+		font-size: em(28px);
+		font-family: $fontAlt;
+		letter-spacing: -1px;
+		a {
+			color: $color-white;
+		}
+	}
+	.badge {
+		text-transform: uppercase;
+		font-weight: 600;
+		padding: 8px 37px;
+	}
+} 

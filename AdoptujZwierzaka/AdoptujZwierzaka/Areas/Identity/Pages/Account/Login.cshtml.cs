@@ -46,6 +46,8 @@ namespace AdoptujZwierzaka.Areas.Identity.Pages.Account
         public class InputModel
         {
             [Required]
+            public string Name { get; set; }
+            [Required]
             [EmailAddress]
             public string Email { get; set; }
 

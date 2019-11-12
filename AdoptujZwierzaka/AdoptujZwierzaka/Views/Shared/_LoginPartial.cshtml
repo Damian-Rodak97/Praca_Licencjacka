@@ -13,7 +13,7 @@
                 <a asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Profile</a>
             </li>
             <li>
-                <form asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new {area = ""})">
+                <form asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("List", "Pet", new {area = ""})">
                     <button type="submit" class="btn btn-secondary btn-success">Logout</button>
                 </form>
             </li>
@@ -24,10 +24,10 @@
                 <a asp-area="" asp-controller="Pet" asp-action="List" asp-route-category="Pies">Psy do adopcji</a>
             </li>
             <li>
-                <a  asp-area="" asp-controller="Pet" asp-action="List" asp-route-category="Kot">Koty do adopcji</a>
+                <a asp-area="" asp-controller="Pet" asp-action="List" asp-route-category="Kot">Koty do adopcji</a>
             </li>
             <li>
-                <a  asp-area="Identity" asp-page="/Account/Register">Rejestracja</a>
+                <a asp-area="Identity" asp-page="/Account/Register">Rejestracja</a>
             </li>
             <li>
                 <a class="btn btn btn-secondary" asp-area="Identity" asp-page="/Account/Login">Zaloguj</a>

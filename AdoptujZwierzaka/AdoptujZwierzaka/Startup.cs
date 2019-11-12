@@ -20,9 +20,9 @@ namespace AdoptujZwierzaka
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration) => 
+        public Startup(IConfiguration configuration) =>
             Configuration = configuration;
-        
+
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
@@ -58,7 +58,7 @@ namespace AdoptujZwierzaka
             app.UseAuthentication();
             app.UseAuthorization();
             app.UseStaticFiles();
-            
+
             app.UseEndpoints(endpoints =>
             {
                 /* endpoints.MapControllerRoute(
@@ -66,16 +66,16 @@ namespace AdoptujZwierzaka
                     pattern: "{category}/Strona{petPage:int}",
                     defaults: new { controller = "Pet", action = "List" });
                 endpoints.MapRazorPages(); */
-                endpoints.MapControllerRoute(
-                    name: "null",
-                    pattern: "Strona{petPage:int}",
-                    defaults: new { controller = "Pet", action = "List", petPage = 1 });
-                endpoints.MapRazorPages();
-                endpoints.MapControllerRoute(
-                    name: "null",
-                    pattern: "{category}",
-                    defaults: new { controller = "Pet", action = "List", petPage = 1 });
-                endpoints.MapRazorPages();
+                /* endpoints.MapControllerRoute(
+                     name: "null",
+                     pattern: "Strona{petPage:int}",
+                     defaults: new { controller = "Pet", action = "List", petPage = 1 });
+                 endpoints.MapRazorPages(); */
+                /* endpoints.MapControllerRoute(
+                     name: "null",
+                     pattern: "{category}",
+                     defaults: new { controller = "Pet", action = "List", petPage = 1 });
+                 endpoints.MapRazorPages(); */
                 endpoints.MapControllerRoute(
                     name: "null",
                     pattern: "",
@@ -84,7 +84,7 @@ namespace AdoptujZwierzaka
                 endpoints.MapControllerRoute(
                     name: "null",
                     pattern: "{controller}/{action}/{id?}");
-                    endpoints.MapRazorPages();
+                endpoints.MapRazorPages();
             });
             SeedData.EnsurePetsOperation(app);
         }

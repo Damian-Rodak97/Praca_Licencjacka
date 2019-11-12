@@ -61,11 +61,11 @@ namespace AdoptujZwierzaka
             
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllerRoute(
+                /* endpoints.MapControllerRoute(
                     name: "null",
                     pattern: "{category}/Strona{petPage:int}",
                     defaults: new { controller = "Pet", action = "List" });
-                endpoints.MapRazorPages();
+                endpoints.MapRazorPages(); */
                 endpoints.MapControllerRoute(
                     name: "null",
                     pattern: "Strona{petPage:int}",

@@ -3,30 +3,43 @@
     ViewBag.Title = "Edycja Produktu";
     Layout = "_AccountLayout";
 }
-    <form asp-action="Edit" method="post">
-        <input type="hidden" asp-for="ID" />
-        <div class="form-group">
-            <label asp-for="Name">Zwierze</label>
-            <div><span asp-validation-for="Name" class="text-danger"></span></div>
-            <input asp-for="Name" class="form-control" />
-        </div>
-        <div>
-            <label asp-for="Description">Opis</label>
-            <div><span asp-validation-for="Description" class="text-danger"></span></div>
-            <textarea asp-for="Description" class="form-control"></textarea>
-        </div>
-        <div class="form-group">
-            <label asp-for="Category">Kategoria</label>
-            <div><span asp-validation-for="Category" class="text-danger"></span></div>
-            <input asp-for="Category" class="form-control" />
-        </div>
-        <div class="form-group">
-            <label asp-for="AddDate">Data Dodania</label>
-            <div><span asp-validation-for="AddDate" class="text-danger"></span></div>
-            <input asp-for="AddDate" class="form-control" type="datetime-local"/>
-        </div>
-        <div class="text-center">
-            <button class="btn btn-primary" type="submit">Zapisz</button>
-            <a asp-action="Index" class="btn btn-secondary">Anuluj</a> 
-        </div>
-    </form>
+<link rel="stylesheet" href="~/assets/js/jquery-3.2.1.min.js" />
+<link rel="stylesheet" href="~/lib/jquery/dist/jquery.min.js" />
+<link rel="stylesheet" href="~/lib/jquery-validation/dist/jquery.validate.min.js" />
+<link rel="stylesheet" href="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js" />
+<script src="~/assets/js/dropzone.js"></script>
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="ID" />
+    <div class="form-group">
+        <label asp-for="Name">Zwierze</label>
+        <div><span asp-validation-for="Name" class="text-danger"></span></div>
+        <input asp-for="Name" class="form-control" />
+    </div>
+    <div>
+        <label asp-for="Description">Opis</label>
+        <div><span asp-validation-for="Description" class="text-danger"></span></div>
+        <textarea asp-for="Description" class="form-control"></textarea>
+    </div>
+    <div class="form-group">
+        <label asp-for="Category">Kategoria</label>
+        <div><span asp-validation-for="Category" class="text-danger"></span></div>
+        <input asp-for="Category" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="AddDate">Data Dodania</label>
+        <div><span asp-validation-for="AddDate" class="text-danger"></span></div>
+        <input asp-for="AddDate" class="form-control" type="datetime-local" />
+    </div>
+    <div class="jumbotron">
+        <form action="~/Home/SaveUploadedFile" method="post" enctype="multipart/form-data" class="dropZone" id="dropzoneForm" style="width: 50px; background: none; border: none;">
+            <div class="fallback">
+                <input asp-for="Picture" name="file" type="file" multiple />
+                <input asp-for="Picture" type="submit" value="Upload" />
+            </div>
+        </form>
+    </div>
+    <div class="text-center">
+        <button class="btn btn-primary" type="submit">Zapisz</button>
+        <a asp-action="Index" class="btn btn-secondary">Anuluj</a>
+    </div>
+</form>

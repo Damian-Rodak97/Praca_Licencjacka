@@ -15,13 +15,13 @@
 <div class="col-md-12">
     <div class="container-fluid">
         <div class="search_welcome">
-            <form action="/zwierzeta-do-adopcji" method="GET" class="form-inline">
-                <input class="form-control tippy-click ui-autocomplete-input" id="pet_town" type="search" placeholder="Cała Polska lub wpisz miasto" aria-label="Search" name="pet_town" data-tippy-content="Wpisz miasto, np. Warszawa" autocomplete="off">
-                <button class="btn btn-outline-success" type="submit" name="pet_type" value="1">
+            <form action="/Pet/List" method="GET" class="form-inline">
+                <input class="form-control tippy-click ui-autocomplete-input" id="City" type="search" placeholder="Cała Polska lub wpisz miasto" aria-label="Search" name="City" data-tippy-content="Wpisz miasto, np. Warszawa" autocomplete="off">
+                <button class="btn btn-outline-success" type="submit" name="Category" value="Pies">
                     <i class="flaticon flaticon-dog"></i>
                     Znajdź psa
                 </button>
-                <button class="btn btn-outline-success" type="submit" name="pet_type" value="2">
+                <button class="btn btn-outline-success" type="submit" name="Category" value="Kot">
                     <i class="flaticon flaticon-cat"></i>
                     Znajdź kota
                 </button>

@@ -16,6 +16,11 @@
         <input asp-for="Name" class="form-control" />
     </div>
     <div>
+        <label asp-for="City">Miasto</label>
+        <div><span asp-validation-for="City" class="text-danger"></span></div>
+        <textarea asp-for="City" class="form-control"></textarea>
+    </div>
+    <div>
         <label asp-for="Description">Opis</label>
         <div><span asp-validation-for="Description" class="text-danger"></span></div>
         <textarea asp-for="Description" class="form-control"></textarea>
@@ -29,14 +34,6 @@
         <label asp-for="AddDate">Data Dodania</label>
         <div><span asp-validation-for="AddDate" class="text-danger"></span></div>
         <input asp-for="AddDate" class="form-control" type="datetime-local" />
-    </div>
-    <div class="jumbotron">
-        <form action="~/Home/SaveUploadedFile" method="post" enctype="multipart/form-data" class="dropZone" id="dropzoneForm" style="width: 50px; background: none; border: none;">
-            <div class="fallback">
-                <input asp-for="Picture" name="file" type="file" multiple />
-                <input asp-for="Picture" type="submit" value="Upload" />
-            </div>
-        </form>
     </div>
     <div class="text-center">
         <button class="btn btn-primary" type="submit">Zapisz</button>

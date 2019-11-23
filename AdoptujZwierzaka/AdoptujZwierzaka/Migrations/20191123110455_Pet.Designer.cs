@@ -7,10 +7,10 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace AdoptujZwierzaka.Data.Migrations
+namespace AdoptujZwierzaka.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20191009151242_Pet")]
+    [Migration("20191123110455_Pet")]
     partial class Pet
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -32,12 +32,15 @@ namespace AdoptujZwierzaka.Data.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Category")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Description")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Picture")

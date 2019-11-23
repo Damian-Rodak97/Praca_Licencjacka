@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using AdoptujZwierzaka.Data;
 using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Threading.Tasks;
-using AdoptujZwierzaka.Data;
 
 namespace AdoptujZwierzaka.Models
 {
@@ -33,6 +29,7 @@ namespace AdoptujZwierzaka.Models
                     dbEntryPet.Description = pet.Description;
                     dbEntryPet.AddDate = pet.AddDate;
                     dbEntryPet.Category = pet.Category;
+                    dbEntryPet.City = pet.City;
                 }
             }
             context.SaveChanges();
@@ -43,7 +40,7 @@ namespace AdoptujZwierzaka.Models
                 .FirstOrDefault(p => p.ID == pet.ID);
             if (dbEntryPet != null)
             {
-                context.Pets.Remove(dbEntryPet); 
+                context.Pets.Remove(dbEntryPet);
                 context.SaveChanges();
             }
             return dbEntryPet;

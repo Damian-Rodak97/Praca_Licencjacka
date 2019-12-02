@@ -1,4 +1,4 @@
-﻿@model Pet
+﻿@model PetViewModel
 @{
     ViewBag.Title = "Edycja Produktu";
     Layout = "_AccountLayout";
@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="~/lib/jquery-validation/dist/jquery.validate.min.js" />
 <link rel="stylesheet" href="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js" />
 <script src="~/assets/js/dropzone.js"></script>
-<form asp-action="Edit" method="post">
+<form enctype="multipart/form-data" asp-action="Edit" method="post">
     <input type="hidden" asp-for="ID" />
     <div class="form-group">
         <label asp-for="Name">Zwierze</label>
@@ -35,8 +35,25 @@
         <div><span asp-validation-for="AddDate" class="text-danger"></span></div>
         <input asp-for="AddDate" class="form-control" type="datetime-local" />
     </div>
+    <div class="form-group">
+        <label asp-for="Photo">Zdjęcie</label>
+        <div><span asp-validation-for="Photo" class="text-danger"></span></div>
+        <div class="col-sm-12">
+            <input asp-for="Photo" class="form-control custom-file-input" />
+            <label class="custom-file-label">Choose file...</label>
+        </div>
+    </div>
     <div class="text-center">
         <button class="btn btn-primary" type="submit">Zapisz</button>
         <a asp-action="Index" class="btn btn-secondary">Anuluj</a>
     </div>
+    <script>
+        $(document).ready(function () {
+            $('.custom-file-input').on("change",
+                function () {
+                    var fileName = $(this).val().split("\\").pop();
+                    $(this).next('.custom-file-label').html(fileName);
+                });
+        })
+    </script>
 </form>

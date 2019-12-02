@@ -20,42 +20,48 @@ namespace AdoptujZwierzaka.Models
                         Name = "Azor",
                         Description = "Pies ma 6 lat i jest bardzo aktywny.",
                         Category = "Pies",
-                        City = "Wroclaw"
+                        City = "Wroclaw",
+                        Picture = "dog.jpg"
                     },
                     new Pet
                     {
                         Name = "Inka",
                         Description = "Pies ma 3 lata i jest bardzo aktywna.",
                         Category = "Pies",
-                        City = "Szczecin"
+                        City = "Szczecin",
+                        Picture = "dog.jpg"
                     },
                     new Pet
                     {
                         Name = "Perła",
                         Description = "Kotka ma 2 lata i jest bardzo aktywna.",
                         Category = "Kot",
-                        City = "Bydgoszcz"
+                        City = "Bydgoszcz",
+                        Picture = "dog.jpg"
                     },
                     new Pet
                     {
                         Name = "Alex",
                         Description = "Pies ma 3 lata i jest bardzo aktywna.",
                         Category = "Pies",
-                        City = "Gdynia"
+                        City = "Gdynia",
+                        Picture = "dog.jpg"
                     },
                     new Pet
                     {
                         Name = "Cezar",
                         Description = "Kot ma rok i jest bardzo leniwy.",
                         Category = "Kot",
-                        City = "Racibórz"
+                        City = "Racibórz",
+                        Picture = "dog.jpg"
                     },
                     new Pet
                     {
                         Name = "Kropka",
                         Description = "Pies ma roczek i jest bardzo leniwy.",
                         Category = "Pies",
-                        City = "Warszawa"
+                        City = "Warszawa",
+                        Picture = "dog.jpg"
                     }
                     );
                 context.SaveChanges();

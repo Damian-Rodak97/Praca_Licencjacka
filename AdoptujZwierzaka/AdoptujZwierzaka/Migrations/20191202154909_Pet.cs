@@ -54,9 +54,10 @@ namespace AdoptujZwierzaka.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(nullable: false),
                     Description = table.Column<string>(nullable: false),
+                    City = table.Column<string>(nullable: false),
                     Category = table.Column<string>(nullable: false),
                     AddDate = table.Column<DateTime>(nullable: false),
-                    Picture = table.Column<string>(nullable: true)
+                    Picture = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
                 {

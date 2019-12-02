@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AdoptujZwierzaka.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20191123113731_Add_City_To_Pets")]
-    partial class Add_City_To_Pets
+    [Migration("20191202154909_Pet")]
+    partial class Pet
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -48,6 +48,7 @@ namespace AdoptujZwierzaka.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Picture")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ID");

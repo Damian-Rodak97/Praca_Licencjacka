@@ -17,11 +17,11 @@
         <div class="search_welcome">
             <form action="/" method="GET" class="form-inline">
                 <input class="form-control tippy-click ui-autocomplete-input" id="City" type="search" placeholder="Cała Polska lub wpisz miasto" aria-label="Search" name="City" data-tippy-content="Wpisz miasto, np. Warszawa" autocomplete="off">
-                <button class="btn btn-outline-success" type="submit" name="Category" value="Pies">
+                <button class="btn btn-outline-success" type="submit" asp-controller="Pet" asp-action="BigList" name="Category" value="Pies">
                     <i class="flaticon flaticon-dog"></i>
                     Znajdź psa
                 </button>
-                <button class="btn btn-outline-success" type="submit" name="Category" value="Kot">
+                <button class="btn btn-outline-success" asp-controller="Pet" asp-action="BigList" type="submit" name="Category" value="Kot">
                     <i class="flaticon flaticon-cat"></i>
                     Znajdź kota
                 </button>

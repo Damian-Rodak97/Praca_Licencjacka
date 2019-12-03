@@ -62,6 +62,70 @@ namespace AdoptujZwierzaka.Models
                         Category = "Pies",
                         City = "Warszawa",
                         Picture = "dog.jpg"
+                    },
+                    new Pet
+                    {
+                        Name = "Perła",
+                        Description = "Kotka ma 2 lata i jest bardzo aktywna.",
+                        Category = "Kot",
+                        City = "Bydgoszcz",
+                        Picture = "dog.jpg"
+                    },
+                    new Pet
+                    {
+                        Name = "Alex",
+                        Description = "Pies ma 3 lata i jest bardzo aktywna.",
+                        Category = "Pies",
+                        City = "Gdynia",
+                        Picture = "dog.jpg"
+                    },
+                    new Pet
+                    {
+                        Name = "Cezar",
+                        Description = "Kot ma rok i jest bardzo leniwy.",
+                        Category = "Kot",
+                        City = "Racibórz",
+                        Picture = "dog.jpg"
+                    },
+                    new Pet
+                    {
+                        Name = "Kropka",
+                        Description = "Pies ma roczek i jest bardzo leniwy.",
+                        Category = "Pies",
+                        City = "Warszawa",
+                        Picture = "dog.jpg"
+                    },
+                    new Pet
+                    {
+                        Name = "Perła",
+                        Description = "Kotka ma 2 lata i jest bardzo aktywna.",
+                        Category = "Kot",
+                        City = "Bydgoszcz",
+                        Picture = "dog.jpg"
+                    },
+                    new Pet
+                    {
+                        Name = "Alex",
+                        Description = "Pies ma 3 lata i jest bardzo aktywna.",
+                        Category = "Pies",
+                        City = "Gdynia",
+                        Picture = "dog.jpg"
+                    },
+                    new Pet
+                    {
+                        Name = "Cezar",
+                        Description = "Kot ma rok i jest bardzo leniwy.",
+                        Category = "Kot",
+                        City = "Racibórz",
+                        Picture = "dog.jpg"
+                    },
+                    new Pet
+                    {
+                        Name = "Kropka",
+                        Description = "Pies ma roczek i jest bardzo leniwy.",
+                        Category = "Pies",
+                        City = "Warszawa",
+                        Picture = "dog.jpg"
                     }
                     );
                 context.SaveChanges();

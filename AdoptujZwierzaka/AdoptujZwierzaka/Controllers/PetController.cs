@@ -10,10 +10,28 @@ namespace AdoptujZwierzaka.Controllers
     {
         private IPetRepository repository;
         public int PageSize = 4;
+        public int PageBigSize = 16;
         public PetController(IPetRepository repo)
         {
             repository = repo;
         }
+
+        public ViewResult BigList(string city, string category, int petPage = 1)
+            => View(new PetsListViewModel
+            {
+                Pets = repository.Pets
+                    .Where(p => category == null || p.Category == category && city == null || p.City == city)
+                    .OrderBy(p => p.ID)
+                    .Skip((petPage - 1) * PageBigSize)
+                    .Take(PageBigSize),
+                PagingInfo = new PagingInfo
+                {
+                    CurrentPage = petPage,
+                    ItemsPerPage = PageBigSize,
+                    TotalItems = category == null ? repository.Pets.Count() : repository.Pets.Where(e => e.Category == category).Count()
+                },
+                CurrentCategory = category
+            });
 
         public ViewResult List(string city, string category, int petPage = 1)
             => View(new PetsListViewModel
@@ -31,7 +49,7 @@ namespace AdoptujZwierzaka.Controllers
                 },
                 CurrentCategory = category
             });
-
+    
 
     }
 }

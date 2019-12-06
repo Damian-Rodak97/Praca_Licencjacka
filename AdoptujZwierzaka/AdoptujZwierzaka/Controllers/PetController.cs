@@ -49,7 +49,5 @@ namespace AdoptujZwierzaka.Controllers
                 },
                 CurrentCategory = category
             });
-    
-
     }
 }

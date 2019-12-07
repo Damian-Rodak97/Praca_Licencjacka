@@ -50,15 +50,17 @@
                 var prevDisabled = !Model.PagingInfo.HasPreviousPage ? "disabled" : "";
                 var nextDisabled = !Model.PagingInfo.HasNextPage ? "disabled" : "";
             }
-            <a asp-action="List" asp-route-petPage="@(Model.PagingInfo.CurrentPage-1)" class="btn btn-primary @prevDisabled">Previous</a>
-            <a asp-action="List" asp-route-petPage="@(Model.PagingInfo.CurrentPage+1)" class="btn btn-primary @nextDisabled">Next</a>
-            <div class="row">
+        <div class="text-center">
+            <a asp-action="List" asp-route-petPage="@(Model.PagingInfo.CurrentPage-1)" class="btn btn-secondary @prevDisabled">Previous</a>
+            <a asp-action="List" asp-route-petPage="@(Model.PagingInfo.CurrentPage+1)" class="btn btn-secondary @nextDisabled">Next</a>
+        </div>
+          <!-- <div class="row">
                 <div page-model="@Model.PagingInfo" page-action="List" page-classes-enabled="true"
                      page-class="btn" page-class-normal="btn-secondary"
                      page-class-selected="btn-primary" page-url-category="@Model.CurrentCategory"
                      class="btn-group pull-right m-1">
                 </div>
-            </div>
+            </div> -->
         </div>
     </section>
     <!-- feautre section -->

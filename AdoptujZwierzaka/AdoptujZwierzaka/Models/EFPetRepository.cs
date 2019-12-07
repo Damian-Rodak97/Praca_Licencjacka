@@ -16,13 +16,13 @@ namespace AdoptujZwierzaka.Models
 
         public void SavePet(Pet pet)
         {
-            if (pet.ID == 0)
+            if (pet.Id == 0)
             {
                 context.Pets.Add(pet);
             }
             else
             {
-                Pet dbEntryPet = context.Pets.FirstOrDefault(p => p.ID == pet.ID);
+                Pet dbEntryPet = context.Pets.FirstOrDefault(p => p.Id == pet.Id);
                 if (dbEntryPet != null)
                 {
                     dbEntryPet.Name = pet.Name;
@@ -38,7 +38,7 @@ namespace AdoptujZwierzaka.Models
         public Pet DeletePet(Pet pet)
         {
             Pet dbEntryPet = context.Pets
-                .FirstOrDefault(p => p.ID == pet.ID);
+                .FirstOrDefault(p => p.Id == pet.Id);
             if (dbEntryPet != null)
             {
                 context.Pets.Remove(dbEntryPet);

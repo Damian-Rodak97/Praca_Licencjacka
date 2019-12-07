@@ -1,11 +1,15 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Identity;
 
 namespace AdoptujZwierzaka.Models
 {
     public class Pet
     {
-        public int ID { get; set; }
+        public IdentityUser User { get; set; }
+        public int Id { get; set; }
         [Required(ErrorMessage = "Proszę podać nazwę produktu.")]
         [Display(Name = "Nazwa")]
         public string Name { get; set; }
@@ -16,6 +20,11 @@ namespace AdoptujZwierzaka.Models
         [Required(ErrorMessage = "Proszę podać miasto.")]
         [Display(Name = "Miasto")]
         public string City { get; set; }
+        public string PostCode { get; set; }
+        public string Street { get; set; }
+        public string Phone { get; set; }
+        public string Sex { get; set; }
+
         [Required(ErrorMessage = "Proszę określić kategorię.")]
         [Display(Name = "Kategoria")]
         public string Category { get; set; }

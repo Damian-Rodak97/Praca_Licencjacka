@@ -21,7 +21,7 @@ namespace AdoptujZwierzaka.Controllers
             {
                 Pets = repository.Pets
                     .Where(p => category == null || p.Category == category && city == null || p.City == city)
-                    .OrderBy(p => p.ID)
+                    .OrderBy(p => p.Id)
                     .Skip((petPage - 1) * PageBigSize)
                     .Take(PageBigSize),
                 PagingInfo = new PagingInfo
@@ -38,7 +38,7 @@ namespace AdoptujZwierzaka.Controllers
             {
                 Pets = repository.Pets
                  .Where(p => category == null || p.Category == category && city == null || p.City == city)
-                .OrderBy(p => p.ID)
+                .OrderBy(p => p.Id)
                 .Skip((petPage - 1) * PageSize)
                 .Take(PageSize),
                 PagingInfo = new PagingInfo

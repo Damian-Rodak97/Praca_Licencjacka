@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace AdoptujZwierzaka.Migrations
 {
-    public partial class Pet : Migration
+    public partial class Pets : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -44,24 +44,6 @@ namespace AdoptujZwierzaka.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_AspNetUsers", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Pets",
-                columns: table => new
-                {
-                    ID = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(nullable: false),
-                    Description = table.Column<string>(nullable: false),
-                    City = table.Column<string>(nullable: false),
-                    Category = table.Column<string>(nullable: false),
-                    AddDate = table.Column<DateTime>(nullable: false),
-                    Picture = table.Column<string>(nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Pets", x => x.ID);
                 });
 
             migrationBuilder.CreateTable(
@@ -170,6 +152,35 @@ namespace AdoptujZwierzaka.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "Pets",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    UserId = table.Column<string>(nullable: true),
+                    Name = table.Column<string>(nullable: false),
+                    Description = table.Column<string>(nullable: false),
+                    City = table.Column<string>(nullable: false),
+                    PostCode = table.Column<string>(nullable: true),
+                    Street = table.Column<string>(nullable: true),
+                    Phone = table.Column<string>(nullable: true),
+                    Sex = table.Column<string>(nullable: true),
+                    Category = table.Column<string>(nullable: false),
+                    AddDate = table.Column<DateTime>(nullable: false),
+                    Picture = table.Column<string>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Pets", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Pets_AspNetUsers_UserId",
+                        column: x => x.UserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
                 table: "AspNetRoleClaims",
@@ -208,6 +219,11 @@ namespace AdoptujZwierzaka.Migrations
                 column: "NormalizedUserName",
                 unique: true,
                 filter: "[NormalizedUserName] IS NOT NULL");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Pets_UserId",
+                table: "Pets",
+                column: "UserId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

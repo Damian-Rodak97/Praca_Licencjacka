@@ -8,6 +8,7 @@ using AdoptujZwierzaka.Models.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 
@@ -18,22 +19,30 @@ namespace AdoptujZwierzaka.Controllers
     {
         private IPetRepository repository;
         private IHostingEnvironment hostingEnvironment;
+        private readonly UserManager<IdentityUser> userManager;
 
-        public AccountController(IPetRepository repo, IHostingEnvironment hostingEnvironment)
+
+        public AccountController(IPetRepository repository, IHostingEnvironment hostingEnvironment, UserManager<IdentityUser> userManager)
         {
-            repository = repo;
+            this.repository = repository;
             this.hostingEnvironment = hostingEnvironment;
+            this.userManager = userManager;
         }
 
-        public ViewResult Index() => View(repository.Pets);
+        public ViewResult Index()
+        {
+            var userId = userManager.GetUserId(HttpContext.User);
+            var currentUserPets = repository.Pets.Where(x => x.User.Id == userId);
+            return View(currentUserPets);
+        }
 
         public ViewResult Edit(int petId)
         {
 
-            Pet pet = repository.Pets.FirstOrDefault(p => p.ID == petId);
+            Pet pet = repository.Pets.FirstOrDefault(p => p.Id == petId);
             PetViewModel petViewModel = new PetViewModel
             {
-                ID = pet.ID,
+                ID = pet.Id,
                 AddDate = pet.AddDate,
                 Category = pet.Category,
                 City = pet.City,
@@ -60,7 +69,7 @@ namespace AdoptujZwierzaka.Controllers
 
                 Pet pet = new Pet
                 {
-                    ID = petViewModel.ID,
+                    Id = petViewModel.ID,
                     AddDate = petViewModel.AddDate,
                     Category = petViewModel.Category,
                     City = petViewModel.City,

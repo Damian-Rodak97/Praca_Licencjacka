@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AdoptujZwierzaka.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20191207153909_Pets")]
+    [Migration("20191207171510_Pets")]
     partial class Pets
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

@@ -9,6 +9,7 @@ namespace AdoptujZwierzaka.Models
     public class Pet
     {
         public IdentityUser User { get; set; }
+        public string UserId { get; set; }
         public int Id { get; set; }
         [Required(ErrorMessage = "Proszę podać nazwę produktu.")]
         [Display(Name = "Nazwa")]

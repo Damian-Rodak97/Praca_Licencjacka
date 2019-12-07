@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using AdoptujZwierzaka.Models;
 using AdoptujZwierzaka.Models.ViewModels;
@@ -38,8 +39,8 @@ namespace AdoptujZwierzaka.Controllers
 
         public ViewResult Edit(int petId)
         {
-
-            Pet pet = repository.Pets.FirstOrDefault(p => p.Id == petId);
+            var userId = userManager.GetUserId(HttpContext.User);
+            Pet pet = repository.Pets.FirstOrDefault(p => p.Id == petId && p.User.Id == userId);
             PetViewModel petViewModel = new PetViewModel
             {
                 ID = pet.Id,
@@ -49,13 +50,13 @@ namespace AdoptujZwierzaka.Controllers
                 Description = pet.Description,
                 Name = pet.Name,
                 Photo = null
-               
             };
             return View(petViewModel);
         } 
         [HttpPost]
         public IActionResult Edit(PetViewModel petViewModel)
         {
+            var userId = userManager.GetUserId(HttpContext.User);
             if (ModelState.IsValid)
             {
                 string uniqueFileName = null;
@@ -66,9 +67,9 @@ namespace AdoptujZwierzaka.Controllers
                    string filePath = Path.Combine(uploadFolder, uniqueFileName);
                    petViewModel.Photo.CopyTo(new FileStream(filePath,FileMode.Create));
                 }
-
                 Pet pet = new Pet
                 {
+                    UserId = userId,
                     Id = petViewModel.ID,
                     AddDate = petViewModel.AddDate,
                     Category = petViewModel.Category,

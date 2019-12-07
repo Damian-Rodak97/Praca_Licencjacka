@@ -78,6 +78,11 @@ namespace AdoptujZwierzaka
                  endpoints.MapRazorPages(); */
                 endpoints.MapControllerRoute(
                     name: "null",
+                    pattern: "Account/Edit/{petId:int}",
+                    defaults: new { controller = "Account", action = "Edit", petId = 1 });
+                endpoints.MapRazorPages(); 
+               endpoints.MapControllerRoute(
+                    name: "null",
                     pattern: "",
                     defaults: new { controller = "Pet", action = "List" });
                 endpoints.MapRazorPages();

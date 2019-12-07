@@ -18,9 +18,15 @@ namespace AdoptujZwierzaka.Models
         [Required(ErrorMessage = "Proszę podać opis.")]
         [Display(Name = "Opis")]
         public string Description { get; set; }
+
         [Required(ErrorMessage = "Proszę podać miasto.")]
         [Display(Name = "Miasto")]
+        public bool Status { get; set; }
+
         public string City { get; set; }
+        public int Age { get; set; }
+        public string Size { get; set; }
+        public string Activity { get; set; }
         public string PostCode { get; set; }
         public string Street { get; set; }
         public string Phone { get; set; }

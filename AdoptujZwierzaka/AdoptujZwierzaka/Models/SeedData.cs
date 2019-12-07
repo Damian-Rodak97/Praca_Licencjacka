@@ -1,4 +1,5 @@
-﻿using AdoptujZwierzaka.Data;
+﻿using System;
+using AdoptujZwierzaka.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
@@ -45,7 +46,8 @@ namespace AdoptujZwierzaka.Models
                         Category = "Pies",
                         City = "Wroclaw",
                         Picture = "dog.jpg",
-                    },
+                        AddDate = new DateTime(2019, 3, 15, 21, 22, 22)
+            },
                     new Pet
                     {
                         UserId = "acec25c2-4144-450d-a305-b466188be6d8",
@@ -53,7 +55,8 @@ namespace AdoptujZwierzaka.Models
                         Description = "Pies ma 3 lata i jest bardzo aktywna.",
                         Category = "Pies",
                         City = "Szczecin",
-                        Picture = "dog.jpg"
+                        Picture = "dog.jpg",
+                        AddDate = new DateTime(2014, 11, 11, 11, 22, 22)
                     },
                     new Pet
                     {
@@ -62,7 +65,8 @@ namespace AdoptujZwierzaka.Models
                         Description = "Kotka ma 2 lata i jest bardzo aktywna.",
                         Category = "Kot",
                         City = "Bydgoszcz",
-                        Picture = "dog.jpg"
+                        Picture = "dog.jpg",
+                        AddDate = new DateTime(2017, 9, 13, 23, 22, 22)
                     },
                     new Pet
                     {

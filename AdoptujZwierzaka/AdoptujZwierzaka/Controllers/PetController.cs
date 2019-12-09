@@ -49,5 +49,11 @@ namespace AdoptujZwierzaka.Controllers
                 },
                 CurrentCategory = category
             });
+
+        public ViewResult PetDetails(int petId)
+        {
+            Pet pet = repository.Pets.FirstOrDefault(p => p.Id == petId);
+            return View(pet);
+        }
     }
 }

@@ -45,9 +45,17 @@ namespace AdoptujZwierzaka.Models
                         Description = "Pies ma 6 lat i jest bardzo aktywny.",
                         Category = "Pies",
                         City = "Wroclaw",
-                        Picture = "dog.jpg",
-                        AddDate = new DateTime(2019, 3, 15, 21, 22, 22)
-            },
+                        Picture = "dog1.jpg",
+                        AddDate = new DateTime(2019, 3, 15, 21, 22, 22),
+                        PostCode = "54-234",
+                        Phone = "983934123",
+                        Street = "Szybka",
+                        Sex = "Pies",
+                        Activity = "Kanapowiec",
+                        Size = "Duży",
+                        Age = 3,
+                        Status = false
+                    },
                     new Pet
                     {
                         UserId = "acec25c2-4144-450d-a305-b466188be6d8",
@@ -55,8 +63,16 @@ namespace AdoptujZwierzaka.Models
                         Description = "Pies ma 3 lata i jest bardzo aktywna.",
                         Category = "Pies",
                         City = "Szczecin",
-                        Picture = "dog.jpg",
-                        AddDate = new DateTime(2014, 11, 11, 11, 22, 22)
+                        Picture = "dog2.jpg",
+                        AddDate = new DateTime(2018, 11, 11, 11, 11, 02),
+                        PostCode = "54-234",
+                        Phone = "983934123",
+                        Street = "Szybka",
+                        Sex = "Pies",
+                        Activity = "Kanapowiec",
+                        Size = "Duży",
+                        Age = 3,
+                        Status = false
                     },
                     new Pet
                     {
@@ -65,8 +81,16 @@ namespace AdoptujZwierzaka.Models
                         Description = "Kotka ma 2 lata i jest bardzo aktywna.",
                         Category = "Kot",
                         City = "Bydgoszcz",
-                        Picture = "dog.jpg",
-                        AddDate = new DateTime(2017, 9, 13, 23, 22, 22)
+                        Picture = "cat1.jpg",
+                        AddDate = new DateTime(2017, 9, 13, 23, 02, 12),
+                        PostCode = "54-234",
+                        Phone = "983934123",
+                        Street = "Szybka",
+                        Sex = "Pies",
+                        Activity = "Kanapowiec",
+                        Size = "Duży",
+                        Age = 3,
+                        Status = false
                     },
                     new Pet
                     {
@@ -75,7 +99,16 @@ namespace AdoptujZwierzaka.Models
                         Description = "Pies ma 3 lata i jest bardzo aktywna.",
                         Category = "Pies",
                         City = "Gdynia",
-                        Picture = "dog.jpg"
+                        Picture = "dog3.jpg",
+                        AddDate = new DateTime(2019, 6, 13, 11, 32, 42),
+                        PostCode = "54-234",
+                        Phone = "983934123",
+                        Street = "Szybka",
+                        Sex = "Pies",
+                        Activity = "Kanapowiec",
+                        Size = "Duży",
+                        Age = 3,
+                        Status = false
                     },
                     new Pet
                     {
@@ -84,80 +117,170 @@ namespace AdoptujZwierzaka.Models
                         Description = "Kot ma rok i jest bardzo leniwy.",
                         Category = "Kot",
                         City = "Racibórz",
-                        Picture = "dog.jpg"
+                        Picture = "cat2.jpg",
+                        AddDate = new DateTime(2019, 12, 13, 21, 21, 12),
+                        PostCode = "54-234",
+                        Phone = "983934123",
+                        Street = "Szybka",
+                        Sex = "Pies",
+                        Activity = "Kanapowiec",
+                        Size = "Duży",
+                        Age = 3,
+                        Status = false
                     },
                     new Pet
                     {
                         UserId = "acec25c2-4144-450d-a305-b466188be6d8",
                         Name = "Kropka",
-                        Description = "Pies ma roczek i jest bardzo leniwy.",
-                        Category = "Pies",
+                        Description = "Spokojna kotka.",
+                        Category = "Kot",
                         City = "Warszawa",
-                        Picture = "dog.jpg"
+                        Picture = "cat3.jpg",
+                        AddDate = new DateTime(2019, 12, 31, 00, 21, 12),
+                        PostCode = "54-234",
+                        Phone = "983934123",
+                        Street = "Szybka",
+                        Sex = "Pies",
+                        Activity = "Kanapowiec",
+                        Size = "Duży",
+                        Age = 3,
+                        Status = false
                     },
                     new Pet
                     {
-                        Name = "Perła",
+                        Name = "Leszek",
                         Description = "Kotka ma 2 lata i jest bardzo aktywna.",
                         Category = "Kot",
                         City = "Bydgoszcz",
-                        Picture = "dog.jpg"
+                        Picture = "cat1.jpg",
+                        AddDate = new DateTime(2019, 12, 13, 21, 21, 12),
+                        PostCode = "54-234",
+                        Phone = "983934123",
+                        Street = "Szybka",
+                        Sex = "Pies",
+                        Activity = "Kanapowiec",
+                        Size = "Duży",
+                        Age = 3,
+                        Status = false
                     },
                     new Pet
                     {
-                        Name = "Alex",
+                        Name = "Ferdek",
                         Description = "Pies ma 3 lata i jest bardzo aktywna.",
                         Category = "Pies",
                         City = "Gdynia",
-                        Picture = "dog.jpg"
+                        Picture = "dog1.jpg",
+                        AddDate = new DateTime(2019, 12, 13, 21, 21, 12),
+                        PostCode = "54-234",
+                        Phone = "983934123",
+                        Street = "Szybka",
+                        Sex = "Pies",
+                        Activity = "Kanapowiec",
+                        Size = "Duży",
+                        Age = 3,
+                        Status = false
                     },
                     new Pet
                     {
-                        Name = "Cezar",
+                        Name = "Zorza",
                         Description = "Kot ma rok i jest bardzo leniwy.",
                         Category = "Kot",
                         City = "Racibórz",
-                        Picture = "dog.jpg"
+                        Picture = "cat3.jpg",
+                        AddDate = new DateTime(2019, 12, 13, 21, 21, 12),
+                        PostCode = "54-234",
+                        Phone = "983934123",
+                        Street = "Szybka",
+                        Sex = "Pies",
+                        Activity = "Kanapowiec",
+                        Size = "Duży",
+                        Age = 3,
+                        Status = false
                     },
                     new Pet
                     {
-                        Name = "Kropka",
+                        Name = "Piorun",
                         Description = "Pies ma roczek i jest bardzo leniwy.",
                         Category = "Pies",
                         City = "Warszawa",
-                        Picture = "dog.jpg"
+                        Picture = "dog3.jpg",
+                        AddDate = new DateTime(2019, 12, 13, 21, 21, 12),
+                        PostCode = "54-234",
+                        Phone = "983934123",
+                        Street = "Szybka",
+                        Sex = "Pies",
+                        Activity = "Kanapowiec",
+                        Size = "Duży",
+                        Age = 3,
+                        Status = false
                     },
                     new Pet
                     {
-                        Name = "Perła",
+                        Name = "Zbyszek",
                         Description = "Kotka ma 2 lata i jest bardzo aktywna.",
                         Category = "Kot",
                         City = "Bydgoszcz",
-                        Picture = "dog.jpg"
+                        Picture = "cat2.jpg",
+                        AddDate = new DateTime(2019, 12, 13, 21, 21, 12),
+                        PostCode = "54-234",
+                        Phone = "983934123",
+                        Street = "Szybka",
+                        Sex = "Pies",
+                        Activity = "Kanapowiec",
+                        Size = "Duży",
+                        Age = 3,
+                        Status = false
                     },
                     new Pet
                     {
-                        Name = "Alex",
+                        Name = "Wafel",
                         Description = "Pies ma 3 lata i jest bardzo aktywna.",
                         Category = "Pies",
                         City = "Gdynia",
-                        Picture = "dog.jpg"
+                        Picture = "dog2.jpg",
+                        AddDate = new DateTime(2019, 12, 13, 21, 21, 12),
+                        PostCode = "54-234",
+                        Phone = "983934123",
+                        Street = "Szybka",
+                        Sex = "Pies",
+                        Activity = "Kanapowiec",
+                        Size = "Duży",
+                        Age = 3,
+                        Status = false
                     },
                     new Pet
                     {
-                        Name = "Cezar",
+                        Name = "Kret",
                         Description = "Kot ma rok i jest bardzo leniwy.",
                         Category = "Kot",
                         City = "Racibórz",
-                        Picture = "dog.jpg"
+                        Picture = "cat1.jpg",
+                        AddDate = new DateTime(2019, 12, 13, 21, 21, 12),
+                        PostCode = "54-234",
+                        Phone = "983934123",
+                        Street = "Szybka",
+                        Sex = "Pies",
+                        Activity = "Kanapowiec",
+                        Size = "Duży",
+                        Age = 3,
+                        Status = false
                     },
                     new Pet
                     {
-                        Name = "Kropka",
+                        Name = "Eryk",
                         Description = "Pies ma roczek i jest bardzo leniwy.",
                         Category = "Pies",
                         City = "Warszawa",
-                        Picture = "dog.jpg"
+                        Picture = "dog3.jpg",
+                        AddDate = new DateTime(2019, 12, 13, 21, 21, 12),
+                        PostCode = "54-234",
+                        Phone = "983934123",
+                        Street = "Szybka",
+                        Sex = "Pies",
+                        Activity = "Kanapowiec",
+                        Size = "Duży",
+                        Age = 3,
+                        Status = false
                     }
                     );
                 context.SaveChanges();

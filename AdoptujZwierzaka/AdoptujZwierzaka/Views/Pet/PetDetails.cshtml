@@ -20,10 +20,18 @@
             <p>@Model.Description</p>
             <h3 class="my-3">Info</h3>
             <ul>
-                <li>@Model.Activity</li>
-                <li>@Model.Age</li>
-                <li>@Model.Sex</li>
-                <li>@Model.Status</li>
+                <li>Aktywność: @Model.Activity</li>
+                <li>Wiek: @Model.Age</li>
+                <li>Płeć: @Model.Sex</li>
+                <li>Status: @if (@Model.Status == false)
+                    {
+                        <a>Czeka na adopcje</a>
+                    }
+                    else
+                    {
+                        <a>Zarezerwowany</a>
+                    }
+                </li>
             </ul>
             <a asp-controller="Pet" asp-action="List" class="btn btn-success">Powrót</a>
         </div>

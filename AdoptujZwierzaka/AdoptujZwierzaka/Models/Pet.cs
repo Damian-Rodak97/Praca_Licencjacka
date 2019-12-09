@@ -30,7 +30,7 @@ namespace AdoptujZwierzaka.Models
         public string PostCode { get; set; }
         public string Street { get; set; }
         public string Phone { get; set; }
-        public string Sex { get; set; }
+        public bool Sex { get; set; }
 
         [Required(ErrorMessage = "Proszę określić kategorię.")]
         [Display(Name = "Kategoria")]

@@ -22,8 +22,18 @@
             <ul>
                 <li>Aktywność: @Model.Activity</li>
                 <li>Wiek: @Model.Age</li>
-                <li>Płeć: @Model.Sex</li>
-                <li>Status: @if (@Model.Status == false)
+                <li>
+                    Płeć: @if (Model.Sex == false)
+                    {
+                        <img height="20px" width="20px" src="~/images/Women.png" />
+                    }
+                    else
+                    {
+                        <img height="20px" width="20px" src="~/images/Men.png" />
+                    }
+                </li>
+                <li>
+                    Status: @if (Model.Status == false)
                     {
                         <a>Czeka na adopcje</a>
                     }

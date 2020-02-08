@@ -101,5 +101,10 @@ namespace AdoptujZwierzaka.Controllers
            
             return RedirectToAction("Index");
         }
+
+        public ViewResult RegisterConfirm()
+        {
+            return View();
+        }
     }
 }

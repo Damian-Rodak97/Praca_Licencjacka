@@ -3,6 +3,80 @@
 @{
     ViewData["Title"] = "Register";
 }
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700%7CQuicksand:300,400,500,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/iconfont.css">
+    <link rel="stylesheet" href="assets/css/isotope.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+
+
+    <!--For Plugins external css-->
+    <link rel="stylesheet" href="assets/css/plugins.css" />
+
+    <!--Theme custom css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!--Theme Responsive css-->
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+</head>
+<body>
+    <section class="bg-gray xs-section-padding">
+        <div class="container">
+        <div class="row d-flex justify-content-center">
+     
+            <div class="col-md-6 sign-in-box">
+                <div class="row d-flex justify-content-center">
+                    <h3 class="">Załóż konto</h3>
+                </div>
+                    <div class="sign-in-form">
+                        <form method="POST" class="login">
+                            <div asp-validation-summary="All" class="text-danger"></div>
+                            <p>
+                                <label asp-for="Input.Email"></label>
+                                <input asp-for="Input.Email" class="form-control" />
+                                <span asp-validation-for="Input.Email" class="text-danger"></span>
+                            </p>
+                            <p>
+                                <label asp-for="Input.Password"></label>
+                                <input asp-for="Input.Password" class="form-control" />
+                                <span asp-validation-for="Input.Password" class="text-danger"></span>
+
+                            </p>
+                            <p>
+                                <label asp-for="Input.ConfirmPassword"></label>
+                                <input asp-for="Input.ConfirmPassword" class="form-control" />
+                                <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+                            </p>
+                            <div class="row d-flex justify-content-center">
+                                <button type="submit" class="btn btn-primary">Załóż konto</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+
+</html>
+<!--
+</html>
+
+<!--
 <div class="col-md-12">
     <h1>@ViewData["Title"]</h1>
 
@@ -61,7 +135,7 @@
             </section>
         </div>
     </div>
-</div>
+</div> -->
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
 }

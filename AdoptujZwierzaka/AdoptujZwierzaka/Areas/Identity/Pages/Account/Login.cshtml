@@ -9,18 +9,13 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Adoptpress Press - Home One</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700%7CQuicksand:300,400,500,700" rel="stylesheet">
 
-    <link rel="icon" type="image/png" href="favicon.ico">
-    <!-- Place favicon.ico in the root directory -->
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/iconfont.css">
     <link rel="stylesheet" href="assets/css/isotope.css">
@@ -45,7 +40,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 sign-in-box">
-                    <h3 class="">Zaloguj się</h3>
+                    <div class="row d-flex justify-content-center">
+                        <h3 class="">Zaloguj się</h3>
+                    </div>
                     <div class="sign-in-form">
                         <form method="POST" id="account" class="login">
                             <div asp-validation-summary="All" class="text-danger"></div>
@@ -80,9 +77,14 @@
                 <div class="col-md-6 sign-info-box">
                     <div class="boxed-widget opening-hours summary margin-top-0">
                         <h3><i class="fa fa-check-square-o"></i> Nie masz konta? <a class="sign-up-link" asp-page="./Register">Zarejestruj się</a></h3>
+                        <ul class="list-2">
+                            <li><h5>Jako schronisko:</h5></li>
+                            <li>Pomogacie znaleść zwierzętą swój dom</li>
+                            <li>Dajecie większe możliwości adopcji</li>
+                            <li>Docieracie do większego grona ludzi</li>
+                        </ul>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>

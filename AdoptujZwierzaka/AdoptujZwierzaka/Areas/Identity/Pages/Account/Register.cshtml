@@ -45,6 +45,11 @@
                         <form method="POST" class="login">
                             <div asp-validation-summary="All" class="text-danger"></div>
                             <p>
+                                <label asp-for="Input.ShelterName"></label>
+                                <input asp-for="Input.ShelterName" class="form-control" />
+                                <span asp-validation-for="Input.ShelterName" class="text-danger"></span>
+                            </p>
+                            <p>
                                 <label asp-for="Input.Email"></label>
                                 <input asp-for="Input.Email" class="form-control" />
                                 <span asp-validation-for="Input.Email" class="text-danger"></span>

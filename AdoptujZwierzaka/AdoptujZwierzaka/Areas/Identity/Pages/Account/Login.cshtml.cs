@@ -22,7 +22,7 @@ namespace AdoptujZwierzaka.Areas.Identity.Pages.Account
         private readonly ILogger<LoginModel> _logger;
         private readonly IEmailSender _emailSender;
 
-        public LoginModel(SignInManager<IdentityUser> signInManager, 
+        public LoginModel(SignInManager<IdentityUser> signInManager,
             ILogger<LoginModel> logger,
             UserManager<IdentityUser> userManager,
             IEmailSender emailSender)
@@ -45,7 +45,8 @@ namespace AdoptujZwierzaka.Areas.Identity.Pages.Account
 
         public class InputModel
         {
-            [Required]
+            [Display(Name = "ShelterName/Email")]
+            public string ShelterName { get; set; }
             [EmailAddress]
             public string Email { get; set; }
 
@@ -82,7 +83,23 @@ namespace AdoptujZwierzaka.Areas.Identity.Pages.Account
             {
                 // This doesn't count login failures towards account lockout
                 // To enable password failures to trigger account lockout, set lockoutOnFailure: true
-                var result = await _signInManager.PasswordSignInAsync(Input.Email, Input.Password, Input.RememberMe, lockoutOnFailure: true);
+                IdentityUser user = new IdentityUser();
+                if (Input.ShelterName.Contains('@'))
+                {
+                    user = await _userManager.FindByEmailAsync(Input.ShelterName);
+                }
+                else
+                {
+                    user = await _userManager.FindByNameAsync(Input.ShelterName);
+                }
+
+                if (user == null)
+                {
+                    ModelState.AddModelError(string.Empty, "No such user");
+                    return Page();
+                }
+
+                var result = await _signInManager.PasswordSignInAsync(user, Input.Password, Input.RememberMe, lockoutOnFailure: true);
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User logged in.");

@@ -51,6 +51,10 @@ namespace AdoptujZwierzaka.Areas.Identity.Pages.Account
         public class InputModel
         {
             [Required]
+            [Display(Name = "ShelterName")]
+            public string ShelterName { get; set; }
+
+            [Required]
             [EmailAddress]
             [Display(Name = "Email")]
             public string Email { get; set; }
@@ -78,7 +82,7 @@ namespace AdoptujZwierzaka.Areas.Identity.Pages.Account
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid)
             {
-                var user = new IdentityUser { UserName = Input.Email, Email = Input.Email };
+                var user = new IdentityUser { UserName = Input.ShelterName, Email = Input.Email };
                 var result = await _userManager.CreateAsync(user, Input.Password);
                 var message = new MimeMessage();
                
@@ -94,7 +98,7 @@ namespace AdoptujZwierzaka.Areas.Identity.Pages.Account
                         values: new { area = "Identity", userId = user.Id, code },
                         protocol: Request.Scheme);
                     callbackUrl.Replace("amp;", string.Empty);
-                    message.From.Add(new MailboxAddress("Damian", "adoptujezwierzaka@gmail.com"));
+                    message.From.Add(new MailboxAddress("AdoptujZwirzaka", "adoptujezwierzaka@gmail.com"));
                     message.To.Add(new MailboxAddress(user.UserName, user.Email));
                     message.Subject = "AdoptujZwierzaka - Verification Mail";
                     message.Body = new TextPart("Html")

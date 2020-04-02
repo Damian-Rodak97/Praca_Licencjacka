@@ -1,0 +1,18 @@
+﻿@model Pet
+<div class="col-md-6 col-lg-3">
+    <div class="xs-single-children">
+        <div class="xs-children-header">
+            <span class="badge badge-secondary badge-pill">@Model.Category</span>
+            <img src="~/images/@Model.Picture" alt="">
+        </div>
+        <div class="xs-children-details">
+            <a asp-action="PetDetails" asp-route-petId="@Model.Id">@Model.Name</a>
+            <h5>@Model.City</h5>
+        </div>
+        <form asp-action="Delete" class="text-center" method="post">
+            <a asp-action="Edit" class="btn btn-sm  btn-warning" asp-route-petId="@Model.Id"> Edytuj </a>
+            <input type="hidden" name="Id" value="@Model.Id" />
+            <button type="submit" class="btn btn-danger btn-sm"> Usuń </button>
+        </form>
+    </div>
+</div>

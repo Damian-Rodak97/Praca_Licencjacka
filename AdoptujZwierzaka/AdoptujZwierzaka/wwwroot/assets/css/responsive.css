@@ -8,7 +8,7 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
 /* Portrait tablets and medium desktops */
 @media (min-width: 992px) and (max-width: 1199px) {
 	body {
-		font-size: 14px;;
+		font-size: 14px;
 	}
 	/* footer */
 	.xs-family-img-footer {
@@ -219,10 +219,7 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
 		right: 0;
 		top: 10px;
 	}
-	/* index version 2 */
-	.xs-header.header-v2 {
-		min-height: auto;
-	}
+
 	/* index v2 ==> welcome */
 	.xs-banner.banner-v2 .xs-banner-title, 
 	.xs-banner.banner-v2 .xs-banner-sub-title {
@@ -269,8 +266,7 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
 		width: 100%;
 	}
 	.donate-card.highlight {
-		min-height: auto;
-		max-height: none;
+        max-height: none;
 	}
 	.donate-content .donate-title,
 	.donate-card.highlight .donate-title {

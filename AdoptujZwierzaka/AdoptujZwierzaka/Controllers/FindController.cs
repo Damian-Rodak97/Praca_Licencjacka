@@ -57,7 +57,7 @@ namespace AdoptujZwierzaka.Controllers
         public ViewResult PetDetails(int petId)
         {
             Pet pet = repository.Pets.FirstOrDefault(p => p.Id == petId);
-            return View(pet);
+            return View("~/Views/Pet/PetDetails.cshtml",pet);
         }
     }
 }

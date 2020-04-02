@@ -19,7 +19,7 @@ ul,
 li {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-tap-highlight-color: transparent;
-  -moz-outline-: none; }
+}
 
 a:focus,
 a:active,
@@ -31,8 +31,7 @@ textarea,
 textarea:hover,
 textarea:focus,
 textarea:active {
-  -moz-outline: none;
-  outline: none; }
+    outline: none; }
 
 img:not([draggable]),
 embed,
@@ -1000,7 +999,6 @@ ul, li {
   font-size: 3.5em;
   text-align: center;
   letter-spacing: -3px;
-  margin-bottom: 25px;
   line-height: 1.13; }
 
 .xs-banner-content p {
@@ -1595,7 +1593,6 @@ ul, li {
 
 /*====================================== 17. Footer Section =======================================*/
 .xs-footer-section {
-  background-image: url("../images/backgrounds/doodle-bg-3.png");
   background-repeat: no-repeat;
   background-position: top 100px center;
   background-size: contain; }
@@ -1630,7 +1627,9 @@ ul, li {
     box-shadow: none; }
 
 .xs-footerTop {
-  padding-top: 100px; }
+    margin-bottom: 150px;
+    padding-top: 150px;
+}
   .xs-footerTop.footertop-v3 {
     background-color: #344a5f;
     padding-bottom: 100px;
@@ -1932,8 +1931,7 @@ ul, li {
     height: 100%;
     width: 100%;
     z-index: -1;
-    -webkit-filter: drop-shadow(8px 0px 16px rgba(0, 0, 0, 0.2));
-    filter: drop-shadow(8px 0px 16px rgba(0, 0, 0, 0.2)); }
+      filter: drop-shadow(8px 0px 16px rgba(0, 0, 0, 0.2)); }
   .xs-team-content h4 {
     margin-bottom: 10px;
     font-size: 1.375em; }
@@ -2245,8 +2243,7 @@ svg {
 .xs-donation-form select {
   -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none;
-  background-image: url(../images/select_arrow.png);
+    background-image: url(../images/select_arrow.png);
   background-repeat: no-repeat;
   background-position: right 27px center; }
   .xs-donation-form select option {
@@ -2926,15 +2923,13 @@ svg {
         transition: all 0.4s ease;
         opacity: 0;
         visibility: hidden;
-        -webkit-filter: drop-shadow(8px 0 16px rgba(0, 0, 0, 0.1));
-        filter: drop-shadow(8px 0 16px rgba(0, 0, 0, 0.1));
+          filter: drop-shadow(8px 0 16px rgba(0, 0, 0, 0.1));
         border-left: 15px solid transparent;
         border-right: 15px solid #333333;
         border-bottom: 15px solid #333333;
         border-top: 15px solid transparent; }
       .xs-nav-tabs .nav-item .nav-link.active {
-        -webkit-filter: drop-shadow(8px 0 16px rgba(0, 0, 0, 0.1));
-        filter: drop-shadow(8px 0 16px rgba(0, 0, 0, 0.1)); }
+          filter: drop-shadow(8px 0 16px rgba(0, 0, 0, 0.1)); }
         .xs-nav-tabs .nav-item .nav-link.active::before {
           opacity: 1;
           visibility: visible; }
@@ -3472,18 +3467,17 @@ h1, h2, h3, h4 {
 	font-weight: 300;
 	color: #fff;
 }
-
 @media only screen and (min-width: 768px) {
-	.search_welcome:after {
-		content: "";
-		position: absolute;
-		display: block;
-		top: 0;
-		left: 44%;
-		border-left: 20px solid #74a644;
-		border-top: 40px solid transparent;
-		border-bottom: 40px solid transparent;
-	}
+    .search_welcome:after {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 44%;
+        border-left: 20px solid #3a9a69;
+        border-top: 40px solid transparent;
+        border-bottom: 40px solid transparent;
+    }
 	.select_pet_type {
 		width: calc(50% - 10px);
 		text-align: center;
@@ -3495,7 +3489,7 @@ h1, h2, h3, h4 {
 	.select_pet_type:nth-child(2n+2) { margin-right: 0; }
 }
 
-.search_welcome input[type="search"]::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+.search_welcome input[type="search"] { /* Chrome, Firefox, Opera, Safari 10.1+ */
 	color: #f0f0f0 !important;
 	opacity: 1; /* Firefox */
 }
@@ -3504,9 +3498,7 @@ h1, h2, h3, h4 {
 	color: #f0f0f0 !important;
 }
 
-.search_welcome input[type="search"]::-ms-input-placeholder { /* Microsoft Edge */
-	color: #f0f0f0 !important;
-}
+
 
 .search_welcome button {
 	background-color: #45ba7e;
@@ -3526,15 +3518,15 @@ h1, h2, h3, h4 {
 	padding: 20px 20px 20px 30px;
 }
 
-.search_welcome button:hover {
-	background: #74a644;
-}
+    .search_welcome button:hover {
+        background: #3a9a69;
+    }
 
-.search_welcome button:last-child {
-	border-left: 1px solid #74a644;
-	border-top-right-radius: 10px;
-	border-bottom-right-radius: 10px;
-}
+    .search_welcome button:last-child {
+        border-left: 1px solid #3a9a69;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
 
 .search_welcome button:last-child {
 	border-radius: 0 10px 10px 0;
@@ -3547,4 +3539,7 @@ h1, h2, h3, h4 {
 .search_welcome [class^="flaticon-"]:before, .search_welcome [class*=" flaticon-"]:before,
 .search_welcome [class^="flaticon-"]:after, .search_welcome [class*=" flaticon-"]:after {
 	font-size: 40px;
+}
+.dog-picture {
+    margin-top: 15px;
 }

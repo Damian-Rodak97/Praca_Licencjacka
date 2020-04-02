@@ -21,6 +21,7 @@ namespace AdoptujZwierzaka.Controllers
         private IPetRepository repository;
         private IHostingEnvironment hostingEnvironment;
         private readonly UserManager<IdentityUser> userManager;
+        public int PageBigSize = 16;
 
 
         public AccountController(IPetRepository repository, IHostingEnvironment hostingEnvironment, UserManager<IdentityUser> userManager)
@@ -30,12 +31,31 @@ namespace AdoptujZwierzaka.Controllers
             this.userManager = userManager;
         }
 
-        public ViewResult Index()
+        public ViewResult Index(string city, string category, int petPage = 1)
         {
             var userId = userManager.GetUserId(HttpContext.User);
             var currentUserPets = repository.Pets.Where(x => x.User.Id == userId);
-            return View(currentUserPets);
+
+            var Pets = new PetsListViewModel
+            {
+                Pets = currentUserPets,
+                PagingInfo = new PagingInfo
+                {
+                    CurrentPage = petPage,
+                    ItemsPerPage = PageBigSize,
+                    TotalItems = category == null
+                        ? repository.Pets.Count()
+                        : repository.Pets.Where(e => e.Category == category).Count()
+                },
+                CurrentCategory = category
+            };
+                return View(Pets);
         }
+        //{
+         //   var userId = userManager.GetUserId(HttpContext.User);
+        //    var currentUserPets = repository.Pets.Where(x => x.User.Id == userId);
+        //    return View(currentUserPets);
+      //  }
 
         public ViewResult Edit(int petId)
         {

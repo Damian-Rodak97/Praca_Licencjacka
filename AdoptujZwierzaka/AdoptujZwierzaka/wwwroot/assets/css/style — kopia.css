@@ -73,7 +73,7 @@ ul,
 li {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-tap-highlight-color: transparent;
-  -moz-outline-: none; }
+}
 
 a:focus,
 a:active,
@@ -85,8 +85,7 @@ textarea,
 textarea:hover,
 textarea:focus,
 textarea:active {
-  -moz-outline: none;
-  outline: none; }
+    outline: none; }
 
 img:not([draggable]),
 embed,
@@ -1636,7 +1635,6 @@ ul, li {
 
 /*====================================== 17. Footer Section =======================================*/
 .xs-footer-section {
-  background-image: url("../images/backgrounds/doodle-bg-3.png");
   background-repeat: no-repeat;
   background-position: top 100px center;
   background-size: contain; }
@@ -1973,7 +1971,6 @@ ul, li {
     height: 100%;
     width: 100%;
     z-index: -1;
-    -webkit-filter: drop-shadow(8px 0px 16px rgba(0, 0, 0, 0.2));
     filter: drop-shadow(8px 0px 16px rgba(0, 0, 0, 0.2)); }
   .xs-team-content h4 {
     margin-bottom: 10px;
@@ -2286,8 +2283,6 @@ svg {
 .xs-donation-form select {
   -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none;
-  background-image: url(../images/select_arrow.png);
   background-repeat: no-repeat;
   background-position: right 27px center; }
   .xs-donation-form select option {
@@ -2967,15 +2962,13 @@ svg {
         transition: all 0.4s ease;
         opacity: 0;
         visibility: hidden;
-        -webkit-filter: drop-shadow(8px 0 16px rgba(0, 0, 0, 0.1));
         filter: drop-shadow(8px 0 16px rgba(0, 0, 0, 0.1));
         border-left: 15px solid transparent;
         border-right: 15px solid #333333;
         border-bottom: 15px solid #333333;
         border-top: 15px solid transparent; }
       .xs-nav-tabs .nav-item .nav-link.active {
-        -webkit-filter: drop-shadow(8px 0 16px rgba(0, 0, 0, 0.1));
-        filter: drop-shadow(8px 0 16px rgba(0, 0, 0, 0.1)); }
+          filter: drop-shadow(8px 0 16px rgba(0, 0, 0, 0.1)); }
         .xs-nav-tabs .nav-item .nav-link.active::before {
           opacity: 1;
           visibility: visible; }

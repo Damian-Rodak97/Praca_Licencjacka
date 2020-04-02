@@ -1,8 +1,6 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <title>@ViewBag.Title</title>
     <style>
         .input-validation-error {
@@ -10,11 +8,32 @@
             background-color: #fee;
         }
     </style>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
-    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="~/assets/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="~/assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/assets/css/iconfont.css" />
+    <link rel="stylesheet" href="~/assets/css/isotope.css" />
+    <link rel="stylesheet" href="~/assets/css/magnific-popup.css" />
+    <link rel="stylesheet" href="~/assets/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="~/assets/css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="~/assets/css/animate.css">
+    <link rel="stylesheet" href="~/css/site.css" />
+    <!--For Plugins external css-->
+    <link rel="stylesheet" href="~/assets/css/plugins.css" />
+
+    <!--Theme custom css -->
+    <link rel="stylesheet" href="~/assets/css/style.css">
+
+    <!--Theme Responsive css-->
+    <link rel="stylesheet" href="~/assets/css/responsive.css" />
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700%7CQuicksand:300,400,500,700" rel="stylesheet">
 </head>
-<body class="m-1 p-1">
+<body>
 <partial name="_NavMenuPartial" />
     <div>
         <h4>@ViewBag.Title</h4>
@@ -24,5 +43,6 @@
         <div class="alert alert-success mt-1">@TempData["message"]</div>
     }
     @RenderBody()
+<partial name="_FooterPartial"/>
 </body>
 </html>

@@ -7,13 +7,16 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] AdoptujZwierzaka</title>
-    <link rel="stylesheet" href="~/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="~/assets/css/iconfont.css">
-    <link rel="stylesheet" href="~/assets/css/isotope.css">
-    <link rel="stylesheet" href="~/assets/css/magnific-popup.css">
-    <link rel="stylesheet" href="~/assets/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="~/assets/css/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="~/assets/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="~/assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/assets/css/iconfont.css" />
+    <link rel="stylesheet" href="~/assets/css/isotope.css" />
+    <link rel="stylesheet" href="~/assets/css/magnific-popup.css" />
+    <link rel="stylesheet" href="~/assets/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="~/assets/css/owl.theme.default.min.css" />
     <link rel="stylesheet" href="~/assets/css/animate.css">
+    <link rel="stylesheet" href="~/css/site.css" />
     <!--For Plugins external css-->
     <link rel="stylesheet" href="~/assets/css/plugins.css" />
 
@@ -22,17 +25,15 @@
 
     <!--Theme Responsive css-->
     <link rel="stylesheet" href="~/assets/css/responsive.css" />
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700%7CQuicksand:300,400,500,700" rel="stylesheet">
 </head>
 <body>
-<partial name="_NavMenuPartial" />
-<div>
+    <partial name="_NavMenuPartial" />
+    <div>
         @RenderBody()
-    </div>
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2019 - AdoptujZwierzaka - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
+</div>
 @RenderSection("Scripts", required: false)
+<partial name="_FooterPartial"/>
 </body>
 </html>

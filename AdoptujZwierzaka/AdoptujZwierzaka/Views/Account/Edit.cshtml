@@ -1,58 +1,66 @@
 ﻿@model PetViewModel
 @{
-    ViewBag.Title = "Edycja Produktu";
     Layout = "_AccountLayout";
 }
-<link rel="stylesheet" href="~/assets/js/jquery-3.2.1.min.js" />
-<link rel="stylesheet" href="~/lib/jquery/dist/jquery.min.js" />
-<link rel="stylesheet" href="~/lib/jquery-validation/dist/jquery.validate.min.js" />
-<link rel="stylesheet" href="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js" />
-<form enctype="multipart/form-data" asp-action="Edit" method="post">
-    <input type="hidden" asp-for="ID" />
-    <div class="form-group">
-        <label asp-for="Name">Zwierze</label>
-        <div><span asp-validation-for="Name" class="text-danger"></span></div>
-        <input asp-for="Name" class="form-control" />
-    </div>
-    <div>
-        <label asp-for="City">Miasto</label>
-        <div><span asp-validation-for="City" class="text-danger"></span></div>
-        <textarea asp-for="City" class="form-control"></textarea>
-    </div>
-    <div>
-        <label asp-for="Description">Opis</label>
-        <div><span asp-validation-for="Description" class="text-danger"></span></div>
-        <textarea asp-for="Description" class="form-control"></textarea>
-    </div>
-    <div class="form-group">
-        <label asp-for="Category">Kategoria</label>
-        <div><span asp-validation-for="Category" class="text-danger"></span></div>
-        <input asp-for="Category" class="form-control" />
-    </div>
-    <div class="form-group">
-        <label asp-for="AddDate">Data Dodania</label>
-        <div><span asp-validation-for="AddDate" class="text-danger"></span></div>
-        <input asp-for="AddDate" class="form-control" type="datetime-local" />
-    </div>
-    <div class="form-group">
-        <label asp-for="Photo">Zdjęcie</label>
-        <div><span asp-validation-for="Photo" class="text-danger"></span></div>
-        <div class="col-sm-12">
-            <input asp-for="Photo" class="form-control custom-file-input" />
-            <label class="custom-file-label">Choose file...</label>
+<div class="container">
+        <div class="row d-flex justify-content-center">
+
+            <div class="col-md-6 sign-in-box">
+                <div class="row d-flex justify-content-center">
+                    <h3 class="">Dodaj zwierze do adopcji</h3>
+                </div>
+                <div class="sign-in-form">
+                    <form enctype="multipart/form-data" asp-action="Edit" method="post">
+                        <input type="hidden" asp-for="ID" />
+                        <p>
+                            <label asp-for="Name">Zwierze</label>
+                            <div><span asp-validation-for="Name" class="text-danger"></span></div>
+                            <input asp-for="Name" class="form-control" />
+                        </p>
+                        <p>
+                            <label asp-for="City">Miasto</label>
+                            <div><span asp-validation-for="City" class="text-danger"></span></div>
+                            <textarea asp-for="City" class="form-control"></textarea>
+                        </p>
+                        <p>
+                            <label asp-for="Description">Opis</label>
+                            <div><span asp-validation-for="Description" class="text-danger"></span></div>
+                            <textarea asp-for="Description" class="form-control"></textarea>
+
+                        </p>
+                        <p>
+                            <label asp-for="Category">Kategoria</label>
+                            <div><span asp-validation-for="Category" class="text-danger"></span></div>
+                            <input asp-for="Category" class="form-control" />
+                        </p>
+                        <p>
+                            <label asp-for="AddDate">Data Dodania</label>
+                            <div><span asp-validation-for="AddDate" class="text-danger"></span></div>
+                            <input asp-for="AddDate" class="form-control" type="datetime-local" />
+                        </p>
+                        <p>
+                            <label asp-for="Photo">Zdjęcie</label>
+                            <div><span asp-validation-for="Photo" class="text-danger"></span></div>
+                            <div class="col-sm-12">
+                                <input asp-for="Photo" class="form-control custom-file-input" />
+                                <label class="custom-file-label">Choose file...</label>
+                            </div>
+                        </p>
+                        <div class="row d-flex justify-content-center">
+                            <button class="btn btn-primary mx-2" type="submit">Dodaj do Adopcji</button>
+                            <a asp-action="Index" class="btn btn-secondary">Anuluj</a>
+                        </div>
+                        <script>
+                            $(document).ready(function () {
+                                $('.custom-file-input').on("change",
+                                    function () {
+                                        var fileName = $(this).val().split("\\").pop();
+                                        $(this).next('.custom-file-label').html(fileName);
+                                    });
+                            })
+                        </script>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="text-center">
-        <button class="btn btn-primary" type="submit">Zapisz</button>
-        <a asp-action="Index" class="btn btn-secondary">Anuluj</a>
-    </div>
-    <script>
-        $(document).ready(function () {
-            $('.custom-file-input').on("change",
-                function () {
-                    var fileName = $(this).val().split("\\").pop();
-                    $(this).next('.custom-file-label').html(fileName);
-                });
-        })
-    </script>
-</form>

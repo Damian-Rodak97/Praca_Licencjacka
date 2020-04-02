@@ -7,6 +7,9 @@
         @if (SignInManager.IsSignedIn(User))
         {
             <li>
+                <a asp-area="" asp-controller="Find" asp-action="Index">Zwierzęta do adopcji</a>
+            </li>
+            <li>
                 <a asp-area="" asp-controller="Account" asp-action="Index">Dodaj Ogłoszenie</a>
             </li>
             <li>

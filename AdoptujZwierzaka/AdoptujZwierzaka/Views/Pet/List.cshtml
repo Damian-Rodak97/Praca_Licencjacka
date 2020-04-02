@@ -12,23 +12,22 @@
         </div><!-- .row END -->
     </div><!-- .container END -->
 </section><!-- End banner section -->
-<div class="col-md-12">
-    <div class="container-fluid">
+<div class="col-md-12 container-fluid">
         <div class="search_welcome">
             <form action="/" method="GET" class="form-inline">
-                <input class="form-control tippy-click ui-autocomplete-input" id="City" type="search" placeholder="Cała Polska lub wpisz miasto" aria-label="Search" name="City" data-tippy-content="Wpisz miasto, np. Warszawa" autocomplete="off">
+                <input class="form-control" id="City" type="search" placeholder="Cała Polska lub wpisz miasto" aria-label="Search" name="City" data-tippy-content="Wpisz miasto, np. Warszawa" autocomplete="off">
                 <button class="btn btn-outline-success" type="submit" asp-controller="Find" asp-action="Index" name="Category" value="Pies">
-                    <i class="flaticon flaticon-dog"></i>
+                    <i></i>
                     Znajdź psa
                 </button>
                 <button class="btn btn-outline-success" asp-controller="Find" asp-action="Index" type="submit" name="Category" value="Kot">
-                    <i class="flaticon flaticon-cat"></i>
+                    <i></i>
                     Znajdź kota
                 </button>
             </form>
         </div>
     </div>
-    <section class="bg-gray xs-section-padding">
+    <section class="xs-section-padding">
         <div class="container">
             <div class="row">
                 <div class="xs-heading col-md-6">
@@ -66,7 +65,7 @@
     <!-- feautre section -->
     <section class="xs-feautre">
         <!-- banner section -->
-        <div class="bg-gray xs-section-padding xs-about">
+        <div class="xs-section-padding xs-about">
             <div class="container">
                 <div class="row">
                     <div class="xs-heading col-md-8">
@@ -106,10 +105,10 @@
             <div class="watermark-bg background-1" style="background-image: url(assets/images/features_bg_2.png)"></div>
         </div>  <!-- End banner section -->
         <!-- services section -->
-        <div class="xs-services xs-bg" style="background-image: url('assets/images/backgrounds/bg-1.png')">
+        <div class="xs-services xs-bg" style="background-image: url('assets/images/backgrounds/doodle-bg-3.png')">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6 offset-lg-6 col-md-8 offset-md-4">
+                    <div class="offset-6 col-lg-6 col-md-8">
                         <div class="xs-service-feature-content">
                             <div class="xs-service-feature-text">
                                 <h2 class="xs-title">Florida Department of Family Services</h2>
@@ -182,6 +181,4 @@
                 </div><!-- .row END -->
             </div><!-- .container END -->
         </div>  <!-- End services section -->
-        <div class="watermark-bg background-2" style="background-image: url(assets/images/features_bg_1.png)"></div>
     </section><!-- End feautre section -->
-</div>

@@ -1,38 +1,67 @@
-﻿@model IQueryable<Pet>
+﻿@model PetsListViewModel
 @{
-    ViewBag.Title = "Wszystkie Zwierzeta";
     Layout = "_AccountLayout";
 }
-<table class="table table-striped table-bordered table-sm">
-    <tr>
-        <th class="text-center">Id</th>
-        <th class="text-center">Zwierze</th>
-        <th class="text-center">Miasto</th>
-        <th class="text-center">Opis</th>
-        <th class="text-center">Data Dodania</th>
-        <th class="text-center">Kategoria</th>
-        <th class="text-center">Akcje</th>
-    </tr>
-    @foreach (var item in Model)
-    {
+<div class="col-md-12">
+    <section class="xs-section-padding">
+        <div class="container">
+            <div class="row">
+                @foreach (var p in Model.Pets)
+                {
+                    @Html.Partial("AccountPetSummary", p)
+                    ;
+                }
+            </div>
+            @{
+                var prevDisabled = !Model.PagingInfo.HasPreviousPage ? "disabled" : "";
+                var nextDisabled = !Model.PagingInfo.HasNextPage ? "disabled" : "";
+            }
+            <div class="row">
+                <div page-model="@Model.PagingInfo" page-action="Index" page-classes-enabled="true"
+                     page-class="btn" page-class-normal="btn-secondary"
+                     page-class-selected="btn-primary" page-url-category="@Model.CurrentCategory"
+                     class="btn-group pull-right m-1">
+                </div>
+            </div>
+            <!--
+    <table class="table">
+        <thead class="thead-dark">
         <tr>
-            <td class="text-center">@item.Id</td>
-            <td class="text-center">@item.Name</td>
-            <td class="text-center">@item.City</td>
-            <td class="text-center">@item.Description</td>
-            <td class="text-center">@item.AddDate</td>
-            <td class="text-center">@item.Category</td>
-            <td class="text-center">
-                <form asp-action="Delete" method="post">
-                    <a asp-action="Edit" class="btn btn-sm btn-warning" asp-route-petId="@item.Id"> Edytuj </a>
-                    <input type="hidden" name="Id" value="@item.Id" />
-                    <button type="submit" class="btn btn-danger btn-sm"> Usuń </button>
-                </form>
-            </td>
+            <th scope="col">Id</th>
+            <th class="col">Zwierze</th>
+            <th class="col">Miasto</th>
+            <th class="col">Opis</th>
+            <th class="col">Data Dodania</th>
+            <th class="col">Kategoria</th>
+            <th class="col">Akcje</th>
         </tr>
-    }
-</table>
-<div class="text-center">
-    <a asp-action="Create" class="btn btn-primary">Dodaj Ogłoszenie</a>
-    <a asp-controller="Pet" asp-action="List" class="btn btn-warning">Powrót</a>
+        </thead>
+        <tbody>
+        @foreach (var item in Model.Pets)
+        {
+            <tr>
+                <th scope="row">@item.Id</th>
+                <td>@item.Name</td>
+                <td>@item.City</td>
+                <td>@item.Description</td>
+                <td>@item.AddDate</td>
+                <td>@item.Category</td>
+                <td>
+                    <form asp-action="Delete" class="form-inline" method="post">
+                        <a asp-action="Edit" class="btn btn-sm  btn-warning" asp-route-petId="@item.Id"> Edytuj </a>
+                        <input type="hidden" name="Id" value="@item.Id" />
+                        <button type="submit" class="btn btn-danger btn-sm"> Usuń </button>
+                    </form>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+    -->
+            <div class="text-center">
+                <a asp-action="Create" class="btn  btn-warning">Dodaj Ogłoszenie</a>
+                <a asp-controller="Pet" asp-action="List" class="btn btn-primary">Powrót</a>
+            </div>
+        </div>
+    </section>
 </div>

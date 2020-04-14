@@ -3,65 +3,75 @@
     Layout = "_AccountLayout";
 }
 <div class="col-md-12">
-    <section class="xs-section-padding">
-        <div class="container">
-            <div class="row">
-                @foreach (var p in Model.Pets)
-                {
-                    @Html.Partial("AccountPetSummary", p)
-                    ;
-                }
-            </div>
-            @{
-                var prevDisabled = !Model.PagingInfo.HasPreviousPage ? "disabled" : "";
-                var nextDisabled = !Model.PagingInfo.HasNextPage ? "disabled" : "";
+    <div class="text-center">
+        <h1>Witaj w swoim schronisku !</h1>
+        <p>
+            <h2>Zmieść ogłoszenia już teraz</h2>
+        </p>
+    </div>
+
+    <div class="container">
+        <div class="text-center">
+            <div class="d-block"><a asp-action="Create" class="btn  btn-warning">Dodaj Ogłoszenie</a></div>
+        </div>
+        <div class="text-center">
+            <h1>Twoje aktualne ogłoszenia:</h1>
+        </div>
+        <div class="row">
+            @foreach (var p in Model.Pets)
+            {
+                @Html.Partial("AccountPetSummary", p)
+                ;
             }
-            <div class="row">
+        </div>
+        @{
+            var prevDisabled = !Model.PagingInfo.HasPreviousPage ? "disabled" : "";
+            var nextDisabled = !Model.PagingInfo.HasNextPage ? "disabled" : "";
+        }
+        <div class="row">
+            @if (@Model.Pets.Count() > 0)
+            {
                 <div page-model="@Model.PagingInfo" page-action="Index" page-classes-enabled="true"
                      page-class="btn" page-class-normal="btn-secondary"
                      page-class-selected="btn-primary" page-url-category="@Model.CurrentCategory"
                      class="btn-group pull-right m-1">
                 </div>
-            </div>
-            <!--
-    <table class="table">
-        <thead class="thead-dark">
-        <tr>
-            <th scope="col">Id</th>
-            <th class="col">Zwierze</th>
-            <th class="col">Miasto</th>
-            <th class="col">Opis</th>
-            <th class="col">Data Dodania</th>
-            <th class="col">Kategoria</th>
-            <th class="col">Akcje</th>
-        </tr>
-        </thead>
-        <tbody>
-        @foreach (var item in Model.Pets)
-        {
-            <tr>
-                <th scope="row">@item.Id</th>
-                <td>@item.Name</td>
-                <td>@item.City</td>
-                <td>@item.Description</td>
-                <td>@item.AddDate</td>
-                <td>@item.Category</td>
-                <td>
-                    <form asp-action="Delete" class="form-inline" method="post">
-                        <a asp-action="Edit" class="btn btn-sm  btn-warning" asp-route-petId="@item.Id"> Edytuj </a>
-                        <input type="hidden" name="Id" value="@item.Id" />
-                        <button type="submit" class="btn btn-danger btn-sm"> Usuń </button>
-                    </form>
-                </td>
-            </tr>
-        }
-        </tbody>
-    </table>
-    -->
-            <div class="text-center">
-                <a asp-action="Create" class="btn  btn-warning">Dodaj Ogłoszenie</a>
-                <a asp-controller="Pet" asp-action="List" class="btn btn-primary">Powrót</a>
-            </div>
+            }
         </div>
-    </section>
+        <!--
+        <table class="table">
+            <thead class="thead-dark">
+            <tr>
+                <th scope="col">Id</th>
+                <th class="col">Zwierze</th>
+                <th class="col">Miasto</th>
+                <th class="col">Opis</th>
+                <th class="col">Data Dodania</th>
+                <th class="col">Kategoria</th>
+                <th class="col">Akcje</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var item in Model.Pets)
+            {
+                <tr>
+                    <th scope="row">@item.Id</th>
+                    <td>@item.Name</td>
+                    <td>@item.City</td>
+                    <td>@item.Description</td>
+                    <td>@item.AddDate</td>
+                    <td>@item.Category</td>
+                    <td>
+                        <form asp-action="Delete" class="form-inline" method="post">
+                            <a asp-action="Edit" class="btn btn-sm  btn-warning" asp-route-petId="@item.Id"> Edytuj </a>
+                            <input type="hidden" name="Id" value="@item.Id" />
+                            <button type="submit" class="btn btn-danger btn-sm"> Usuń </button>
+                        </form>
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>
+        -->
+    </div>
 </div>

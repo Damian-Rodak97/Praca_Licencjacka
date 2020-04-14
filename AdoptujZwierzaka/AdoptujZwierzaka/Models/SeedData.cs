@@ -21,7 +21,7 @@ namespace AdoptujZwierzaka.Models
                     new IdentityUser
                     {
                         Id = "acec25c2-4144-450d-a305-b466188be6d8",
-                        UserName = "Testowe@wp.pl",
+                        UserName = "Schronisko dla zwierząt Bydgoszcz",
                         NormalizedUserName = "TESTOWE@WP.PL",
                         Email = "Testowe@wp.pl",
                         NormalizedEmail = "TESTOWE@WP.PL",
@@ -42,7 +42,7 @@ namespace AdoptujZwierzaka.Models
                     {
                         UserId = "acec25c2-4144-450d-a305-b466188be6d8",
                         Name = "Azor",
-                        Description = "Pies ma 6 lat i jest bardzo aktywny.",
+                        Description = "Mój pies nazywa się Borys. Jest to duży pies rasy nowofunlad, który jest samcem. Jego maść jest brązowa.To najżadsze ubarwienie tej rasy psa.Borys lubi spacery a także jeśli rzuca mu się patyk.Jego ulubione miejsce do hasania to las na granicy Popielowa i Jankowic.Moj pies jest zwierzęciem bardzo wesołym. Dawno już przestał być szczeniakiem ale do dziś lubi bawić sie piłką. Gdy przychodzę ze szkoły radośnie mnie wita szczekając. Borysa zabieram wszędzie gdzie mogę.Jest moim wiernym towarzyszem. Gdy pada deszcz bardzo się smuce, ponieważ nie mogę z nim pobawić lub wyjść na spacer.Gdy jest ciepło uwielbia gdy naleję mu zimnej wody do miski aby się ochłodził.Moim zdaniem warto zawsze mieć u boku takiego przyjaciela.Nigdy Cię nie opuści i zawsze będzie wiernym towarzyszem zabaw.",
                         Category = "Pies",
                         City = "Wroclaw",
                         Picture = "dog1.jpg",

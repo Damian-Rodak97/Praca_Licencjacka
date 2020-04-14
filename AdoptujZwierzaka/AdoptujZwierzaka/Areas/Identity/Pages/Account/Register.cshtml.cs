@@ -60,6 +60,11 @@ namespace AdoptujZwierzaka.Areas.Identity.Pages.Account
             public string Email { get; set; }
 
             [Required]
+            [Phone]
+            [Display(Name = "Phone")]
+            public string Phone { get; set; }
+
+            [Required]
             [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
             [DataType(DataType.Password)]
             [Display(Name = "Password")]
@@ -82,7 +87,7 @@ namespace AdoptujZwierzaka.Areas.Identity.Pages.Account
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid)
             {
-                var user = new IdentityUser { UserName = Input.ShelterName, Email = Input.Email };
+                var user = new IdentityUser { UserName = Input.ShelterName, Email = Input.Email, PhoneNumber = Input.Phone };
                 var result = await _userManager.CreateAsync(user, Input.Password);
                 var message = new MimeMessage();
                

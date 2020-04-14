@@ -36,30 +36,30 @@
                 </div><!-- .xs-heading END -->
             </div><!-- .row END -->
             <div class="row">
-                <!-- <div id="categories" class="col-3">
-            @await Component.InvokeAsync("NavigationMenu")
-        </div> -->
+                    <!-- <div id="categories" class="col-3">
+                @await Component.InvokeAsync("NavigationMenu")
+            </div> -->
 
-                @foreach (var p in Model.Pets)
-                {
-                    @Html.Partial("PetSummary", p);
-                }
-            </div>
+                    @foreach (var p in Model.Pets)
+                    {
+                        @Html.Partial("PetSummary", p);
+                    }
+                </div>
             @{
                 var prevDisabled = !Model.PagingInfo.HasPreviousPage ? "disabled" : "";
                 var nextDisabled = !Model.PagingInfo.HasNextPage ? "disabled" : "";
             }
-        <div class="text-center">
-            <a asp-action="List" asp-route-petPage="@(Model.PagingInfo.CurrentPage-1)" class="btn btn-secondary @prevDisabled">Previous</a>
-            <a asp-action="List" asp-route-petPage="@(Model.PagingInfo.CurrentPage+1)" class="btn btn-secondary @nextDisabled">Next</a>
+            <div class="text-center">
+                <a asp-action="List" asp-route-petPage="@(Model.PagingInfo.CurrentPage-1)" class="btn btn-secondary @prevDisabled">Previous</a>
+                <a asp-action="List" asp-route-petPage="@(Model.PagingInfo.CurrentPage+1)" class="btn btn-secondary @nextDisabled">Next</a>
+            </div>
+            <!-- <div class="row">
+        <div page-model="@Model.PagingInfo" page-action="List" page-classes-enabled="true"
+             page-class="btn" page-class-normal="btn-secondary"
+             page-class-selected="btn-primary" page-url-category="@Model.CurrentCategory"
+             class="btn-group pull-right m-1">
         </div>
-          <!-- <div class="row">
-                <div page-model="@Model.PagingInfo" page-action="List" page-classes-enabled="true"
-                     page-class="btn" page-class-normal="btn-secondary"
-                     page-class-selected="btn-primary" page-url-category="@Model.CurrentCategory"
-                     class="btn-group pull-right m-1">
-                </div>
-            </div> -->
+    </div> -->
         </div>
     </section>
     <!-- feautre section -->
@@ -105,7 +105,7 @@
             <div class="watermark-bg background-1" style="background-image: url(assets/images/features_bg_2.png)"></div>
         </div>  <!-- End banner section -->
         <!-- services section -->
-        <div class="xs-services xs-bg" style="background-image: url('assets/images/backgrounds/doodle-bg-3.png')">
+        <div class="xs-services xs-bg" style="background-image: url('assets/images/backgrounds/doodle-bg-7.jpg'); background-size: contain;">
             <div class="container">
                 <div class="row">
                     <div class="offset-6 col-lg-6 col-md-8">

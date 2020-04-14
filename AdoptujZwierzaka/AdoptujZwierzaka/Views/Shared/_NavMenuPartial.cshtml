@@ -45,9 +45,15 @@
                     </div>
                     <div class="nav-menus-wrapper">
                         <ul class="nav-menu">
-                            <li><a asp-area="" asp-controller="Account" asp-action="Index">Dodaj ogłosznie</a></li>
+                            <li><a asp-area="" asp-controller="Find" asp-action="Index">Zwierzęta do adopcji</a></li>
+                            <li><a asp-area="" asp-controller="Account" asp-action="Index">Moje schronisko</a></li>
                             <li><a asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Profil</a></li>
-                            <li><a>Wyloguj<form asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("List", "Pet", new {area = ""})"><button type="submit" class="btn-lg btn-block" style="background-color: transparent; border-color: transparent;box-shadow: none;" ></button></form></a></li>
+                            <li>
+                                <a>
+                                    Wyloguj
+                                    <form asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("List", "Pet", new {area = ""})"><button type="submit" class="btn-lg btn-block" style="background-color: transparent; border-color: transparent; box-shadow: none;"></button></form>
+                                </a>
+                            </li>
                         </ul><!-- .nav-menu END -->
                     </div><!-- .nav-menus-wrapper .row END -->
                 </nav>

@@ -2,6 +2,8 @@
 using AdoptujZwierzaka.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
+using Microsoft.AspNetCore.Identity;
+
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace AdoptujZwierzaka.Controllers
@@ -9,10 +11,12 @@ namespace AdoptujZwierzaka.Controllers
     public class PetController : Controller
     {
         private IPetRepository repository;
+        private readonly UserManager<IdentityUser> userManager;
         public int PageSize = 4;
         
-        public PetController(IPetRepository repo)
+        public PetController(IPetRepository repo, UserManager<IdentityUser> _userManager)
         {
+            userManager = _userManager;
             repository = repo;
         }
 
@@ -36,8 +40,11 @@ namespace AdoptujZwierzaka.Controllers
 
         public ViewResult PetDetails(int petId)
         {
-            Pet pet = repository.Pets.FirstOrDefault(p => p.Id == petId);
-            return View(pet);
+            ShelterModel shelter = new ShelterModel();
+            shelter.Pet = repository.Pets.FirstOrDefault(p => p.Id == petId);
+            var user = userManager.Users.FirstOrDefault(s => s.Id == shelter.Pet.UserId);
+            shelter.User = user;
+            return View(shelter);
         }
     }
 }

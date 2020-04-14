@@ -2,6 +2,8 @@
 using AdoptujZwierzaka.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
+using Microsoft.AspNetCore.Identity;
+
 namespace AdoptujZwierzaka.Controllers
 {
     public class FindController : Controller
@@ -9,9 +11,11 @@ namespace AdoptujZwierzaka.Controllers
         public int PageBigSize = 16;
         private IPetRepository repository;
         public int PageSize = 4;
+        private readonly UserManager<IdentityUser> userManager;
 
-        public FindController(IPetRepository repository)
+        public FindController(IPetRepository repository, UserManager<IdentityUser> _userManager)
         {
+            userManager = _userManager;
             this.repository = repository;
         }
 
@@ -56,8 +60,11 @@ namespace AdoptujZwierzaka.Controllers
             });
         public ViewResult PetDetails(int petId)
         {
-            Pet pet = repository.Pets.FirstOrDefault(p => p.Id == petId);
-            return View("~/Views/Pet/PetDetails.cshtml",pet);
+            ShelterModel shelter = new ShelterModel();
+            shelter.Pet = repository.Pets.FirstOrDefault(p => p.Id == petId);
+            var user = userManager.Users.FirstOrDefault(s => s.Id == shelter.Pet.UserId);
+            shelter.User = user;
+            return View("~/Views/Pet/PetDetails.cshtml",shelter);
         }
     }
 }

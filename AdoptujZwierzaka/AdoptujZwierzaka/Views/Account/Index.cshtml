@@ -2,18 +2,15 @@
 @{
     Layout = "_AccountLayout";
 }
-<div class="col-md-12">
-    <div class="text-center">
+<div class="col-md-12 ">
+    <div  class="offset-3 col-md-6 text-center shelter-ad">
         <h1>Witaj w swoim schronisku !</h1>
         <p>
             <h2>Zmieść ogłoszenia już teraz</h2>
         </p>
+        <div class="d-block"><a asp-action="Create" class="btn  btn-warning">Dodaj Ogłoszenie</a></div>
     </div>
-
-    <div class="container">
-        <div class="text-center">
-            <div class="d-block"><a asp-action="Create" class="btn  btn-warning">Dodaj Ogłoszenie</a></div>
-        </div>
+    <div class="container shelter-ad">
         <div class="text-center">
             <h1>Twoje aktualne ogłoszenia:</h1>
         </div>
@@ -28,7 +25,7 @@
             var prevDisabled = !Model.PagingInfo.HasPreviousPage ? "disabled" : "";
             var nextDisabled = !Model.PagingInfo.HasNextPage ? "disabled" : "";
         }
-        <div class="row">
+        <div class="ml-1 row">
             @if (@Model.Pets.Count() > 0)
             {
                 <div page-model="@Model.PagingInfo" page-action="Index" page-classes-enabled="true"

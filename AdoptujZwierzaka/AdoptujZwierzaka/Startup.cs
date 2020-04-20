@@ -15,6 +15,7 @@ using Microsoft.AspNetCore.Routing.Template;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Options;
 
 namespace AdoptujZwierzaka
 {
@@ -34,6 +35,7 @@ namespace AdoptujZwierzaka
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddTransient<IPetRepository, EFPetRepository>();
+            //services.Configure<>
             services.AddControllersWithViews();
             services.AddRazorPages();
         }

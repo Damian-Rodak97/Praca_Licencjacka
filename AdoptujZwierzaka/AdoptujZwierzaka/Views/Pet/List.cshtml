@@ -50,8 +50,8 @@
                 var nextDisabled = !Model.PagingInfo.HasNextPage ? "disabled" : "";
             }
             <div class="text-center">
-                <a asp-action="List" asp-route-petPage="@(Model.PagingInfo.CurrentPage-1)" class="btn btn-secondary @prevDisabled">Previous</a>
-                <a asp-action="List" asp-route-petPage="@(Model.PagingInfo.CurrentPage+1)" class="btn btn-secondary @nextDisabled">Next</a>
+                <a asp-action="List" asp-route-petPage="@(Model.PagingInfo.CurrentPage-1)" class="btn btn-secondary @prevDisabled">Poprzedni</a>
+                <a asp-action="List" asp-route-petPage="@(Model.PagingInfo.CurrentPage+1)" class="btn btn-secondary @nextDisabled">Następny</a>
             </div>
             <!-- <div class="row">
         <div page-model="@Model.PagingInfo" page-action="List" page-classes-enabled="true"
@@ -69,34 +69,34 @@
             <div class="container">
                 <div class="row">
                     <div class="xs-heading col-md-8">
-                        <h2 class="xs-sub-title">What Makes</h2>
-                        <h3 class="xs-title">Our Agency Unique?</h3>
-                        <p>We strive to be the hands and feet of Jesus for children and families around the world. Bethany has a heart for children and we equip families to be the answer.</p>
+                        <h2 class="xs-sub-title">Co sprawia</h2>
+                        <h3 class="xs-title">że nasze schronisko jest wyjątkowe?</h3>
+                        <p>Naszym priorytetem się bezpieczeństwo adopcji. Dlatego stawiamy nacisk na bezpieczny proces adopcyjny.</p>
                     </div><!-- .xs-heading END -->
                 </div><!-- .row END -->
                 <div class="row">
                     <div class="col-lg-7">
                         <div class="xs-service-content">
-                            <h3 class="xs-title" data-title="Services">Start your adoption journey with us.</h3>
-                            <p>We are a non-profit professional association of adoption social workers and consultants living and working worldwide. Together we have consulted in over 1000 adoption cases in over 100 countries since 1990 for Americans abroad. We provide Hague-accredited home studies and post adoption services for inter country adoptions as employees. We are a non-profit professional association of adoption social workers and consultants living and working worldwide. Together we have consulted in over 1000 adoption cases in over 100 countries.</p>
-                            <a href="#" class="btn btn-success">get started now</a>
+                            <h3 class="xs-title" data-title="Zacznij">Zacznij swoją przygodę - zaadoptuj zwierzaka.</h3>
+                            <p>Jesteśmy organizacją skupiająca się na profesjonalnym podejściu do adopcji zwierząt takich jak psi i koty. Razem z współpracującymi schroniskami mamy dla naszych klientów szeroki wybór zwierząt domowych od zwierząt bezdomnych po rasowe. Asystujemy w adopcji i służymy pomoca przy wyborze odpowiedniego pupila. Naszą misją jest zapewnić bezpieczny dom dla zwierząt.</p>
+                            <a href="#" class="btn btn-success">Zacznij adopcje</a>
                         </div><!-- .xs-service-content END -->
                     </div>
                     <div class="col-lg-5">
                         <div class="media xs-single-feature">
-                            <img src="assets/images/icons/family-icon.png" class="d-flex" alt="">
+                            <img src="assets/images/icons/dog-health-list.png" style="height: 100px; width: 100px;" class="d-flex mt-1" alt="">
                             <div class="media-body">
-                                <h4>Foster Care</h4>
-                                <p>Children in foster care have been removed from their families because of neglect and abuse  the things means life.</p>
-                                <a href="#"><i class="fa fa-play"></i> read more</a>
+                                <h4>Proces adopcji</h4>
+                                <p>Nasz proces adopcji składa się z szeregu pytań pomagających sprawdzić adoptujących. Sprawdzamy jakie cechy,nawyki i środowisko posiada osoba starająca się o adopcje.</p>
+                                <a href="#"><i class="fa fa-play"></i> Czytaj więcej</a>
                             </div>
                         </div><!-- .xs-single-feature END -->
                         <div class="media xs-single-feature">
-                            <img src="assets/images/icons/health-icon.png" class="d-flex" alt="">
+                            <img src="assets/images/icons/pet-shelter.png" class="d-flex mt-1" style="height: 100px; width: 100px;" alt="">
                             <div class="media-body">
-                                <h4>Adoption Care</h4>
-                                <p>Millions of children around the world are in need of a loving family. As a full-service agency, we offer infant adoption care.</p>
-                                <a href="#"><i class="fa fa-play"></i> read more</a>
+                                <h4>Schroniska</h4>
+                                <p>Znajdziesz tutaj liste schronisk współpracujących z nami oraz zwierząta jakie mają w do zaoferowania.</p>
+                                <a href="#"><i class="fa fa-play"></i> Czytaj więcej</a>
                             </div>
                         </div><!-- .xs-single-feature END -->
                     </div>
@@ -111,23 +111,23 @@
                     <div class="offset-6 col-lg-6 col-md-8">
                         <div class="xs-service-feature-content">
                             <div class="xs-service-feature-text">
-                                <h2 class="xs-title">Florida Department of Family Services</h2>
-                                <p>We strive to be the hands and feet of Jesus for children and families around the world. It allows you to gather monthly <span class="color-secondarys">subscriptions from</span> fans to help fund your creative projects.</p>
+                                <h2 class="xs-title">Wirtualne schronisko dla realnych zwierząt</h2>
+                                <p>"Ratując psa, nie zmienimy świata, ale świat zmieni się dla tego jednego psa." Pomóż ratować zwierzętka. Każda <span class="color-secondarys">zbiórka pieniędzy</span> jest przekazywana na dowolnie wybranę schronisko lub zwierzę. Tym prostym gestem pozwolisz pomagać potrzebującym zwierzętą przez schroniska.</p>
                             </div>
                             <div class="row mx-auto">
                                 <div class="col-lg-4">
                                     <ul class="nav flex-column xs-v-nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                                         <li class="nav-item">
-                                            <a class="nav-link active show" data-toggle="pill" href="#progress">Progress</a>
+                                            <a class="nav-link active show" data-toggle="pill" href="#progress">Progres</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" data-toggle="pill" href="#donated">Donated</a>
+                                            <a class="nav-link" data-toggle="pill" href="#donated">Cel</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" data-toggle="pill" href="#mission">Mission</a>
+                                            <a class="nav-link" data-toggle="pill" href="#mission">Wsparcie</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" data-toggle="pill" href="#vission">Vission</a>
+                                            <a class="nav-link" data-toggle="pill" href="#vission">Wizja</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -136,32 +136,32 @@
                                         <div class="tab-pane fadeIn active show xs-v-tab-content" id="progress" role="tabpanel">
                                             <div class="xs-chart" data-percent="65">
                                                 <div class="xs-piechart-content">
-                                                    <strong>65%</strong>
-                                                    <small>Donated</small>
+                                                    <strong>73%</strong>
+                                                    <small>Adopcji</small>
                                                 </div>
                                             </div>
-                                            <h4>Has been donated this year to our Children Health Program.</h4>
-                                            <p>Could you offer a child the love and security of a family for life? Find out who can adopt and if it’s right for you.</p>
+                                            <h4>Dzięki nam tyle zwierząt znajduje dom przez naszą platformę</h4>
+                                            <p>Dziękujemy za zaufanie którym nasz obdarzacie i zaangarzowanie z jaką chcecie się opiekować adoptowanymi zwierzętami.</p>
                                         </div><!-- #progress END -->
                                         <div class="tab-pane fadeIn show xs-v-tab-content" id="donated" role="tabpanel">
                                             <div class="xs-chart" data-percent="85">
                                                 <div class="xs-piechart-content">
                                                     <strong>85%</strong>
-                                                    <small>Donated</small>
+                                                    <small>schronisk w Polsce</small>
                                                 </div>
                                             </div>
-                                            <h4>Has been donated this year to our Children Health Program.</h4>
-                                            <p>Could you offer a child the love and security of a family for life? Find out who can adopt and if it’s right for you.</p>
+                                            <h4>Zamieszcza swoje zwierząta na naszej platformie.</h4>
+                                            <p>Z miłości do czworonogów staramy się zapewnić im jak najlepszą przyszłośc w ciepłym i przytulnym domu. Dlatego pomagamy adoptującym znaleźć zwierzaka, dzięki którym spełniamą się wasze marzenia w całej Polsce.</p>
                                         </div><!-- #donated END -->
                                         <div class="tab-pane fadeIn show xs-v-tab-content" id="mission" role="tabpanel">
                                             <div class="xs-chart" data-percent="73">
                                                 <div class="xs-piechart-content">
-                                                    <strong>73%</strong>
-                                                    <small>Donated</small>
+                                                    <strong>75%</strong>
+                                                    <small>Darowizn</small>
                                                 </div>
                                             </div>
-                                            <h4>Has been donated this year to our Children Health Program.</h4>
-                                            <p>Could you offer a child the love and security of a family for life? Find out who can adopt and if it’s right for you.</p>
+                                            <h4>Zostało przekazane do państwowych schronisk na opiekę dla zwierząt.</h4>
+                                            <p>Czy chciałbyś zaoferować swoją miłość i opiekę dla zwierzętą? Dzięki naszemu programowi możesz wirtualnie opiekować się dowolnie wybranym przez siebie zwierzatkiem.</p>
                                         </div><!-- #mission END -->
                                         <div class="tab-pane fadeIn show xs-v-tab-content" id="vission" role="tabpanel">
                                             <div class="xs-chart" data-percent="75">
@@ -170,8 +170,8 @@
                                                     <small>Donated</small>
                                                 </div>
                                             </div>
-                                            <h4>Has been donated this year to our Children Health Program.</h4>
-                                            <p>Could you offer a child the love and security of a family for life? Find out who can adopt and if it’s right for you.</p>
+                                            <h4>Chcemy wprowdzić wsparcie wirtualne dla zwierząt przez darowizne.</h4>
+                                            <p>Nie masz jak zaadaptować zwierzęcia do swojego domu. Będziesz mógł wspomagać swojego ulubieńca przez zakup dla niego jedzenia.</p>
                                         </div><!-- #vission END -->
                                     </div>
                                 </div>

@@ -23,7 +23,6 @@ namespace AdoptujZwierzaka.Controllers
         private readonly UserManager<IdentityUser> userManager;
         public int PageBigSize = 16;
 
-
         public AccountController(IPetRepository repository, IHostingEnvironment hostingEnvironment, UserManager<IdentityUser> userManager)
         {
             this.repository = repository;

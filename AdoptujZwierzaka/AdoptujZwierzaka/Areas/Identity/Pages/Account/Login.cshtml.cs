@@ -45,16 +45,17 @@ namespace AdoptujZwierzaka.Areas.Identity.Pages.Account
 
         public class InputModel
         {
-            [Display(Name = "ShelterName/Email")]
+            [Display(Name = "Nazwa schroniska/Email")]
             public string ShelterName { get; set; }
             [EmailAddress]
             public string Email { get; set; }
 
             [Required]
             [DataType(DataType.Password)]
+            [Display(Name = "Hasło")]
             public string Password { get; set; }
 
-            [Display(Name = "Remember me?")]
+            [Display(Name = "Zapamiętaj mnie?")]
             public bool RememberMe { get; set; }
         }
 

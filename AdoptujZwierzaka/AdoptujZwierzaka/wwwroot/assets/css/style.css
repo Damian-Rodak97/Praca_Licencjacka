@@ -101,13 +101,15 @@ ul, li {
 
 .btn-secondary {
   background-color: #45ba7e; }
-  .btn-secondary:hover {
-    background-color: #fff; }
+    .btn-secondary:hover {
+        background-color: lightgrey;}
 
 .btn-success {
-  background-color: #04d2c8; }
-  .btn-success:hover {
-    background-color: #03aaa2; }
+    background-color: lightblue;
+}
+    .btn-success:hover {
+        background-color: lightsteelblue;
+    }
 
 .btn-warning {
   background-color: #7dc924; }

@@ -84,7 +84,7 @@ namespace AdoptujZwierzaka.Areas.Identity.Pages.Account.Manage
             }
 
             await _signInManager.RefreshSignInAsync(user);
-            StatusMessage = "Your password has been set.";
+            StatusMessage = "Hasło zostało zmienione.";
 
             return RedirectToPage();
         }

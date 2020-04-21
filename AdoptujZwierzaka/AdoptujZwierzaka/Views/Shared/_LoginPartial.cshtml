@@ -13,7 +13,16 @@
                 <a asp-area="" asp-controller="Account" asp-action="Index">Moje schronisko</a>
             </li>
             <li>
-                <a asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Profil</a>
+                <div class="dropdown">
+                    <a class="dropdown-toggle text-white" type="button" id="Profil" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Profil
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="Profil">
+                        <a class="dropdown-item" style="color:black" asp-area="Identity" asp-page="/Account/Email">Zmień e-mail</a>
+                        <a class="dropdown-item" href="#">Zmień hasło</a>
+                        <a class="dropdown-item" href="#">Trzeci element</a>
+                    </div>
+                </div>
             </li>
             <li>
                 <form asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("List", "Pet", new {area = ""})">

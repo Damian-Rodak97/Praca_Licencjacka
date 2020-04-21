@@ -15,7 +15,7 @@
             <h5>@Model.City</h5>
         </div>
         <form asp-action="Delete" class="text-center" method="post">
-            <a asp-action="Edit" class="btn btn-warning" asp-route-petId="@Model.Id"> Edytuj </a>
+            <a asp-action="Edit" class="btn btn-secondary" asp-route-petId="@Model.Id"> Edytuj </a>
             <input type="hidden" name="Id" value="@Model.Id" />
             <button type="submit" class="btn btn-danger"> Usuń </button>
         </form>

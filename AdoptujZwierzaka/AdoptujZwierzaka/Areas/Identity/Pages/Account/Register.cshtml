@@ -1,7 +1,7 @@
 ﻿@page
 @model RegisterModel
 @{
-    ViewData["Title"] = "Register";
+   ViewData["Title"] = "Register";
 }
 <!doctype html>
 <html class="no-js" lang="en">
@@ -13,7 +13,6 @@
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700%7CQuicksand:300,400,500,700" rel="stylesheet">
 
-
 </head>
 <body>
     <section class="xs-section-padding">
@@ -21,8 +20,10 @@
         <div class="row d-flex justify-content-center">
      
             <div class="col-md-6 sign-in-box shelter-ad">
-                <div class="row d-flex justify-content-center">
+                <div class="text-center">
                     <h3 class="">Załóż konto</h3>
+                    <img src="~/assets/images/icons/single_user.png" />
+                    <span  class="text-danger">@ViewData["fail"]</span>
                 </div>
                     <div class="sign-in-form">
                         <form method="POST" class="login">

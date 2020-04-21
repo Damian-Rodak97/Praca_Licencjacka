@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
@@ -14,6 +15,8 @@ using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
 using MailKit.Net.Smtp;
 using MimeKit;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
+using Microsoft.VisualBasic;
 
 namespace AdoptujZwierzaka.Areas.Identity.Pages.Account
 {
@@ -24,20 +27,20 @@ namespace AdoptujZwierzaka.Areas.Identity.Pages.Account
         private readonly UserManager<IdentityUser> _userManager;
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
-        
-
+ 
 
         public RegisterModel(
             UserManager<IdentityUser> userManager,
             SignInManager<IdentityUser> signInManager,
             ILogger<RegisterModel> logger,
             IEmailSender emailSender)
+           
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _logger = logger;
             _emailSender = emailSender;
-            
+
         }
         [BindProperty]
         public InputModel Input { get; set; }
@@ -85,8 +88,13 @@ namespace AdoptujZwierzaka.Areas.Identity.Pages.Account
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid)
             {
+                if (_userManager.Users.FirstOrDefault(s => s.Email == Input.Email) != null)
+                {
+                    return RedirectToPage("/Account/RegisterFailed");
+                }
                 var user = new IdentityUser { UserName = Input.ShelterName, Email = Input.Email, PhoneNumber = Input.Phone };
                 var result = await _userManager.CreateAsync(user, Input.Password);
+
                 var message = new MimeMessage();
                
                 if (result.Succeeded)

@@ -47,7 +47,14 @@
                         <ul class="nav-menu">
                             <li><a asp-area="" asp-controller="Find" asp-action="Index">Zwierzęta do adopcji</a></li>
                             <li><a asp-area="" asp-controller="Account" asp-action="Index">Moje schronisko</a></li>
-                            <li><a asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Profil</a></li>
+                            <li>
+                                    <a class="dropdown-toggle" type="button" id="Profil" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Profil</a>
+                                    <div class="dropdown-menu" aria-labelledby="Profil">
+                                        <a class="dropdown-item" style="color: black" asp-area="Identity" asp-page="/Account/Manage/Index">Zmień dane</a>
+                                        <a class="dropdown-item" style="color: black" asp-area="Identity" asp-page="/Account/Manage/Email">Zmień e-mail</a>
+                                        <a class="dropdown-item" style="color: black" asp-area="Identity" asp-page="/Account/Manage/SetPassword">Zmień hasło</a>
+                                    </div>
+                            </li>
                             <li>
                                 <a>
                                     Wyloguj

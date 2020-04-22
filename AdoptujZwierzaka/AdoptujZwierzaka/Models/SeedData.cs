@@ -31,7 +31,23 @@ namespace AdoptujZwierzaka.Models
                         SecurityStamp = "BVSQHATQ645CCE2LPUAVD5BNKOSPQ7HN",
                         ConcurrencyStamp = "1d524979-4454-47cf-bc4b-3267443ba6a6",
                         LockoutEnabled = true
+                    },
+                    new IdentityUser
+                    {
+                        Id = "409bf9f7-b454-468a-8fc4-21811eb96374",
+                        UserName = "SchroniskoWroclaw",
+                        NormalizedUserName = "DAMIAN.RODAK97A@GMAIL.COM",
+                        Email = "damian.rodak97a@gmail.com",
+                        NormalizedEmail = "DAMIAN.RODAK97A@GMAIL.COM",
+                        EmailConfirmed = true,
+                        PasswordHash =
+                            "AQAAAAEAACcQAAAAEHu9DfOqEajhYLd884AE6PjaNxgmEhVnRmZ+kgTaD0DLhR7i9kM0tKHELv6iceAhxg==",
+                        PhoneNumber = "973845332",
+                        SecurityStamp = "NVFFV5HDLFLEGWRHOQUXKHT5SEYB3A5C",
+                        ConcurrencyStamp = "cabb1bbc-bdac-43f8-9367-2ff0f2b652aa",
+                        LockoutEnabled = true
                     }
+
                 );
                 context.SaveChanges();
             }
@@ -130,7 +146,7 @@ namespace AdoptujZwierzaka.Models
                     },
                     new Pet
                     {
-                        UserId = "acec25c2-4144-450d-a305-b466188be6d8",
+                        UserId = "409bf9f7-b454-468a-8fc4-21811eb96374",
                         Name = "Kropka",
                         Description = "Spokojna kotka.",
                         Category = "Kot",
@@ -148,6 +164,7 @@ namespace AdoptujZwierzaka.Models
                     },
                     new Pet
                     {
+                        UserId = "409bf9f7-b454-468a-8fc4-21811eb96374",
                         Name = "Leszek",
                         Description = "Kotka ma 2 lata i jest bardzo aktywna.",
                         Category = "Kot",
@@ -165,6 +182,7 @@ namespace AdoptujZwierzaka.Models
                     },
                     new Pet
                     {
+                        UserId = "409bf9f7-b454-468a-8fc4-21811eb96374",
                         Name = "Ferdek",
                         Description = "Pies ma 3 lata i jest bardzo aktywna.",
                         Category = "Pies",
@@ -182,6 +200,7 @@ namespace AdoptujZwierzaka.Models
                     },
                     new Pet
                     {
+                        UserId = "409bf9f7-b454-468a-8fc4-21811eb96374",
                         Name = "Zorza",
                         Description = "Kot ma rok i jest bardzo leniwy.",
                         Category = "Kot",
@@ -199,6 +218,7 @@ namespace AdoptujZwierzaka.Models
                     },
                     new Pet
                     {
+                        UserId = "409bf9f7-b454-468a-8fc4-21811eb96374",
                         Name = "Piorun",
                         Description = "Pies ma roczek i jest bardzo leniwy.",
                         Category = "Pies",
@@ -216,6 +236,7 @@ namespace AdoptujZwierzaka.Models
                     },
                     new Pet
                     {
+                        UserId = "409bf9f7-b454-468a-8fc4-21811eb96374",
                         Name = "Zbyszek",
                         Description = "Kotka ma 2 lata i jest bardzo aktywna.",
                         Category = "Kot",
@@ -233,6 +254,7 @@ namespace AdoptujZwierzaka.Models
                     },
                     new Pet
                     {
+                        UserId = "409bf9f7-b454-468a-8fc4-21811eb96374",
                         Name = "Wafel",
                         Description = "Pies ma 3 lata i jest bardzo aktywna.",
                         Category = "Pies",
@@ -250,6 +272,7 @@ namespace AdoptujZwierzaka.Models
                     },
                     new Pet
                     {
+                        UserId = "409bf9f7-b454-468a-8fc4-21811eb96374",
                         Name = "Kret",
                         Description = "Kot ma rok i jest bardzo leniwy.",
                         Category = "Kot",
@@ -267,6 +290,7 @@ namespace AdoptujZwierzaka.Models
                     },
                     new Pet
                     {
+                        UserId = "409bf9f7-b454-468a-8fc4-21811eb96374",
                         Name = "Eryk",
                         Description = "Pies ma roczek i jest bardzo leniwy.",
                         Category = "Pies",

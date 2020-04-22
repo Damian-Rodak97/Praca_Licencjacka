@@ -1,21 +1,18 @@
 ﻿@model Pet
-<style>
-    a:hover {
-       color: #45ba7e;
-    }
-</style>
-<div class="col-md-6 col-lg-3 flip-card">
-    <div class="xs-single-children">
+<div class="col-md-6 col-lg-3">
+    <a asp-action="PetDetails" asp-route-petId="@Model.Id">
+        <div class="xs-single-children" id="card">
             <div class="xs-children-header">
                 <span class="badge badge-secondary badge-pill">@Model.Category</span>
                 <img src="~/images/@Model.Picture" alt="">
             </div>
             <div class="xs-children-details">
-                <a style="{:hover{color: #45ba7e;}} " asp-action="PetDetails" asp-route-petId="@Model.Id">@Model.Name</a>
+                <a asp-action="PetDetails" asp-route-petId="@Model.Id" class="card-pet">@Model.Name</a>
                 <h5>@Model.City</h5>
             </div>
         </div>
-    </div>
+    </a>
+</div>
 <!-- .xs-children-details END -->
         <!--  <div class="card card-outline-primary m-1 p-1">
         <div class="bg-faded p-1">

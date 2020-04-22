@@ -1,23 +1,20 @@
 ﻿@model Pet
-<style>
-    a:hover {
-        color: #45ba7e;
-    }
-</style>
-<div class="col-md-6 col-lg-3">
-    <div class="xs-single-children">
-        <div class="xs-children-header">
-            <span class="badge badge-secondary badge-pill">@Model.Category</span>
-            <img src="~/images/@Model.Picture" alt="">
-        </div>
-        <div class="xs-children-details">
-            <a asp-controller="Pet" asp-action="PetDetails" asp-route-petId="@Model.Id">@Model.Name</a>
-            <h5>@Model.City</h5>
-        </div>
-        <form asp-action="Delete" class="text-center" method="post">
-            <a asp-action="Edit" class="btn btn-secondary" asp-route-petId="@Model.Id"> Edytuj </a>
-            <input type="hidden" name="Id" value="@Model.Id" />
-            <button type="submit" class="btn btn-danger"> Usuń </button>
-        </form>
+    <div class="col-md-6 col-lg-3">
+        <a asp-action="PetDetails" asp-route-petId="@Model.Id">
+            <div class="xs-single-children" id="card">
+                <div class="xs-children-header">
+                    <span class="badge badge-secondary badge-pill">@Model.Category</span>
+                    <img src="~/images/@Model.Picture" alt="">
+                </div>
+                <div class="xs-children-details">
+                    <a asp-controller="Pet" asp-action="PetDetails" asp-route-petId="@Model.Id" class="card-pet">@Model.Name</a>
+                    <h5>@Model.City</h5>
+                </div>
+                <form asp-action="Delete" class="text-center" method="post">
+                    <a asp-action="Edit" class="btn btn-secondary  card-btn" asp-route-petId="@Model.Id"> Edytuj </a>
+                    <input type="hidden" name="Id" value="@Model.Id" />
+                    <button type="submit" class="btn btn-danger card-btn"> Usuń </button>
+                </form>
+            </div>
+        </a>
     </div>
-</div>

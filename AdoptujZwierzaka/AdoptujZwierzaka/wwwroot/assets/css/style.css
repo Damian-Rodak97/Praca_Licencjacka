@@ -3556,3 +3556,12 @@ h1, h2, h3, h4 {
     border-radius: 10px;
     padding: 15px;
 }
+#card:hover {
+    box-shadow: 0 0 15px 0 lightslategrey;
+}
+.card-pet:hover {
+    color: #45ba7e;
+}
+.card-btn {
+    border-radius: 0px;
+}

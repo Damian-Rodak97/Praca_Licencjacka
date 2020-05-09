@@ -51,11 +51,10 @@ namespace AdoptujZwierzaka.Controllers
                 return View(Pets);
         }
         //{
-         //   var userId = userManager.GetUserId(HttpContext.User);
+        //   var userId = userManager.GetUserId(HttpContext.User);
         //    var currentUserPets = repository.Pets.Where(x => x.User.Id == userId);
         //    return View(currentUserPets);
-      //  }
-
+        //  }
         public ViewResult Edit(int petId)
         {
             var userId = userManager.GetUserId(HttpContext.User);
@@ -68,7 +67,11 @@ namespace AdoptujZwierzaka.Controllers
                 City = pet.City,
                 Description = pet.Description,
                 Name = pet.Name,
-                Photo = null
+                Photo = null,
+                Sex = pet.Sex,
+                Activity = pet.Activity,
+                Size = pet.Size,
+                Age = pet.Age
             };
             return View(petViewModel);
         } 
@@ -90,12 +93,16 @@ namespace AdoptujZwierzaka.Controllers
                 {
                     UserId = userId,
                     Id = petViewModel.ID,
-                    AddDate = petViewModel.AddDate,
+                    AddDate = DateTime.Now,
                     Category = petViewModel.Category,
                     City = petViewModel.City,
                     Description = petViewModel.Description,
                     Name = petViewModel.Name,
-                    Picture = uniqueFileName
+                    Picture = uniqueFileName,
+                    Sex = petViewModel.Sex,
+                    Activity = petViewModel.Activity,
+                    Size = petViewModel.Size,
+                    Age = petViewModel.Age
                 };
                 repository.SavePet(pet);
                 TempData["message"] = $"Zapisano {pet.Name}."; 
@@ -120,6 +127,13 @@ namespace AdoptujZwierzaka.Controllers
            
             return RedirectToAction("Index");
         }
-
+        public ViewResult PetDetails(int petId)
+        {
+            ShelterModel shelter = new ShelterModel();
+            shelter.Pet = repository.Pets.FirstOrDefault(p => p.Id == petId);
+            var user = userManager.Users.FirstOrDefault(s => s.Id == shelter.Pet.UserId);
+            shelter.User = user;
+            return View("~/Views/Pet/PetDetails.cshtml", shelter);
+        }
     }
 }

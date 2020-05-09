@@ -76,7 +76,7 @@ namespace AdoptujZwierzaka.Models
                     {
                         UserId = "acec25c2-4144-450d-a305-b466188be6d8",
                         Name = "Inka",
-                        Description = "Pies ma 3 lata i jest bardzo aktywna.",
+                        Description = "Większość swojego życia spędziłem w schronisku, na szczęście to już zamierzchła przeszłość. Teraz od nowa poznaję życie i zamierzam się nim cieszyć. Jestem pogodnym i radosnym psiakiem, chociaż w niektórych sytuacjach boję się jeszcze i wycofuję. Jeżeli nie przeszkadza Ci to i chciałbyś ze mną poznawać świat- czekam na Ciebie w Gdyni i w tej okolicy chciałbym zamieszkać. Wiktor",
                         Category = "Pies",
                         City = "Szczecin",
                         Picture = "dog2.jpg",
@@ -94,7 +94,7 @@ namespace AdoptujZwierzaka.Models
                     {
                         UserId = "acec25c2-4144-450d-a305-b466188be6d8",
                         Name = "Perła",
-                        Description = "Kotka ma 2 lata i jest bardzo aktywna.",
+                        Description = "Jestem bardzo łagodną i delikatną koteczką. Jeszcze 3 miesiące temu chorawałam i wychudzona błąkałam się po działkach. Dzisiaj jestem piękna i elegancka. W domu tymczasowym czekam na nowego opiekuna, który doceni moją kocią niezależność. ",
                         Category = "Kot",
                         City = "Bydgoszcz",
                         Picture = "cat1.jpg",
@@ -112,7 +112,7 @@ namespace AdoptujZwierzaka.Models
                     {
                         UserId = "acec25c2-4144-450d-a305-b466188be6d8",
                         Name = "Alex",
-                        Description = "Pies ma 3 lata i jest bardzo aktywna.",
+                        Description = "Większość swojego życia spędziłem w schronisku, na szczęście to już zamierzchła przeszłość. Teraz od nowa poznaję życie i zamierzam się nim cieszyć. Jestem pogodnym i radosnym psiakiem, chociaż w niektórych sytuacjach boję się jeszcze i wycofuję. Jeżeli nie przeszkadza Ci to i chciałbyś ze mną poznawać świat- czekam na Ciebie w Gdyni i w tej okolicy chciałbym zamieszkać. Wiktor",
                         Category = "Pies",
                         City = "Gdynia",
                         Picture = "dog3.jpg",
@@ -130,7 +130,7 @@ namespace AdoptujZwierzaka.Models
                     {
                         UserId = "acec25c2-4144-450d-a305-b466188be6d8",
                         Name = "Cezar",
-                        Description = "Kot ma rok i jest bardzo leniwy.",
+                        Description = "Jestem bardzo łagodną i delikatną koteczką. Jeszcze 3 miesiące temu chorawałam i wychudzona błąkałam się po działkach. Dzisiaj jestem piękna i elegancka. W domu tymczasowym czekam na nowego opiekuna, który doceni moją kocią niezależność. ",
                         Category = "Kot",
                         City = "Racibórz",
                         Picture = "cat2.jpg",
@@ -291,7 +291,7 @@ namespace AdoptujZwierzaka.Models
                     new Pet
                     {
                         UserId = "409bf9f7-b454-468a-8fc4-21811eb96374",
-                        Name = "Eryk",
+                        Name = "Lolek",
                         Description = "Pies ma roczek i jest bardzo leniwy.",
                         Category = "Pies",
                         City = "Warszawa",
@@ -305,8 +305,169 @@ namespace AdoptujZwierzaka.Models
                         Size = "Duży",
                         Age = 3,
                         Status = false
+                    },
+                    new Pet 
+                    {
+                    UserId = "acec25c2-4144-450d-a305-b466188be6d8",
+                    Name = "Wiktor",
+                    Description = "Mój pies nazywa się Borys. Jest to duży pies rasy nowofunlad, który jest samcem. Jego maść jest brązowa.To najżadsze ubarwienie tej rasy psa.Borys lubi spacery a także jeśli rzuca mu się patyk.Jego ulubione miejsce do hasania to las na granicy Popielowa i Jankowic.Moj pies jest zwierzęciem bardzo wesołym. Dawno już przestał być szczeniakiem ale do dziś lubi bawić sie piłką. Gdy przychodzę ze szkoły radośnie mnie wita szczekając. Borysa zabieram wszędzie gdzie mogę.Jest moim wiernym towarzyszem. Gdy pada deszcz bardzo się smuce, ponieważ nie mogę z nim pobawić lub wyjść na spacer.Gdy jest ciepło uwielbia gdy naleję mu zimnej wody do miski aby się ochłodził.Moim zdaniem warto zawsze mieć u boku takiego przyjaciela.Nigdy Cię nie opuści i zawsze będzie wiernym towarzyszem zabaw.",
+                    Category = "Pies",
+                    City = "Wroclaw",
+                    Picture = "dog3.jpg",
+                    AddDate = new DateTime(2019, 3, 15, 21, 22, 22),
+                    PostCode = "54-234",
+                    Phone = "983934123",
+                    Street = "Szybka",
+                    Sex = true,
+                    Activity = "Kanapowiec",
+                    Size = "Duży",
+                    Age = 3,
+                    Status = true
+                    },
+               new Pet {
+                    UserId = "acec25c2-4144-450d-a305-b466188be6d8",
+                    Name = "Eryk",
+                    Description = "Mój pies nazywa się Borys. Jest to duży pies rasy nowofunlad, który jest samcem. Jego maść jest brązowa.To najżadsze ubarwienie tej rasy psa.Borys lubi spacery a także jeśli rzuca mu się patyk.Jego ulubione miejsce do hasania to las na granicy Popielowa i Jankowic.Moj pies jest zwierzęciem bardzo wesołym. Dawno już przestał być szczeniakiem ale do dziś lubi bawić sie piłką. Gdy przychodzę ze szkoły radośnie mnie wita szczekając. Borysa zabieram wszędzie gdzie mogę.Jest moim wiernym towarzyszem. Gdy pada deszcz bardzo się smuce, ponieważ nie mogę z nim pobawić lub wyjść na spacer.Gdy jest ciepło uwielbia gdy naleję mu zimnej wody do miski aby się ochłodził.Moim zdaniem warto zawsze mieć u boku takiego przyjaciela.Nigdy Cię nie opuści i zawsze będzie wiernym towarzyszem zabaw.",
+                    Category = "Pies",
+                    City = "Wroclaw",
+                    Picture = "dog1.jpg",
+                    AddDate = new DateTime(2019, 3, 15, 21, 22, 22),
+                    PostCode = "54-234",
+                    Phone = "983934123",
+                    Street = "Szybka",
+                    Sex = true,
+                    Activity = "Aktywny",
+                    Size = "Duży",
+                    Age = 3,
+                    Status = true
+                },
+                    new Pet
+                    {
+                        UserId = "acec25c2-4144-450d-a305-b466188be6d8",
+                        Name = "Pipek",
+                        Description = "Mój pies nazywa się Borys. Jest to duży pies rasy nowofunlad, który jest samcem. Jego maść jest brązowa.To najżadsze ubarwienie tej rasy psa.Borys lubi spacery a także jeśli rzuca mu się patyk.Jego ulubione miejsce do hasania to las na granicy Popielowa i Jankowic.Moj pies jest zwierzęciem bardzo wesołym. Dawno już przestał być szczeniakiem ale do dziś lubi bawić sie piłką. Gdy przychodzę ze szkoły radośnie mnie wita szczekając. Borysa zabieram wszędzie gdzie mogę.Jest moim wiernym towarzyszem. Gdy pada deszcz bardzo się smuce, ponieważ nie mogę z nim pobawić lub wyjść na spacer.Gdy jest ciepło uwielbia gdy naleję mu zimnej wody do miski aby się ochłodził.Moim zdaniem warto zawsze mieć u boku takiego przyjaciela.Nigdy Cię nie opuści i zawsze będzie wiernym towarzyszem zabaw.",
+                        Category = "Pies",
+                        City = "Wroclaw",
+                        Picture = "dog2.jpg",
+                        AddDate = new DateTime(2019, 3, 15, 21, 22, 22),
+                        PostCode = "54-234",
+                        Phone = "984441323",
+                        Street = "Różana",
+                        Sex = true,
+                        Activity = "Kanapowiec",
+                        Size = "Duży",
+                        Age = 3,
+                        Status = true
+                    },
+                    new Pet
+                    {
+                        UserId = "acec25c2-4144-450d-a305-b466188be6d8",
+                        Name = "Piorun",
+                        Description = "Mój pies nazywa się Borys. Jest to duży pies rasy nowofunlad, który jest samcem. Jego maść jest brązowa.To najżadsze ubarwienie tej rasy psa.Borys lubi spacery a także jeśli rzuca mu się patyk.Jego ulubione miejsce do hasania to las na granicy Popielowa i Jankowic.Moj pies jest zwierzęciem bardzo wesołym. Dawno już przestał być szczeniakiem ale do dziś lubi bawić sie piłką. Gdy przychodzę ze szkoły radośnie mnie wita szczekając. Borysa zabieram wszędzie gdzie mogę.Jest moim wiernym towarzyszem. Gdy pada deszcz bardzo się smuce, ponieważ nie mogę z nim pobawić lub wyjść na spacer.Gdy jest ciepło uwielbia gdy naleję mu zimnej wody do miski aby się ochłodził.Moim zdaniem warto zawsze mieć u boku takiego przyjaciela.Nigdy Cię nie opuści i zawsze będzie wiernym towarzyszem zabaw.",
+                        Category = "Pies",
+                        City = "Wroclaw",
+                        Picture = "dog3.jpg",
+                        AddDate = new DateTime(2019, 3, 15, 21, 22, 22),
+                        PostCode = "54-234",
+                        Phone = "923341233",
+                        Street = "Leśna",
+                        Sex = true,
+                        Activity = "Kanapowiec",
+                        Size = "Duży",
+                        Age = 3,
+                        Status = true
+                    },
+                    new Pet
+                    {
+                        UserId = "acec25c2-4144-450d-a305-b466188be6d8",
+                        Name = "Piorun",
+                        Description = "Mój pies nazywa się Borys. Jest to duży pies rasy nowofunlad, który jest samcem. Jego maść jest brązowa.To najżadsze ubarwienie tej rasy psa.Borys lubi spacery a także jeśli rzuca mu się patyk.Jego ulubione miejsce do hasania to las na granicy Popielowa i Jankowic.Moj pies jest zwierzęciem bardzo wesołym. Dawno już przestał być szczeniakiem ale do dziś lubi bawić sie piłką. Gdy przychodzę ze szkoły radośnie mnie wita szczekając. Borysa zabieram wszędzie gdzie mogę.Jest moim wiernym towarzyszem. Gdy pada deszcz bardzo się smuce, ponieważ nie mogę z nim pobawić lub wyjść na spacer.Gdy jest ciepło uwielbia gdy naleję mu zimnej wody do miski aby się ochłodził.Moim zdaniem warto zawsze mieć u boku takiego przyjaciela.Nigdy Cię nie opuści i zawsze będzie wiernym towarzyszem zabaw.",
+                        Category = "Pies",
+                        City = "Wroclaw",
+                        Picture = "dog1.jpg",
+                        AddDate = new DateTime(2019, 3, 15, 21, 22, 22),
+                        PostCode = "54-234",
+                        Phone = "923341233",
+                        Street = "Leśna",
+                        Sex = true,
+                        Activity = "Kanapowiec",
+                        Size = "Duży",
+                        Age = 3,
+                        Status = true
+                    },
+                    new Pet
+                    {
+                        UserId = "acec25c2-4144-450d-a305-b466188be6d8",
+                        Name = "Piorun",
+                        Description = "Mój pies nazywa się Borys. Jest to duży pies rasy nowofunlad, który jest samcem. Jego maść jest brązowa.To najżadsze ubarwienie tej rasy psa.Borys lubi spacery a także jeśli rzuca mu się patyk.Jego ulubione miejsce do hasania to las na granicy Popielowa i Jankowic.Moj pies jest zwierzęciem bardzo wesołym. Dawno już przestał być szczeniakiem ale do dziś lubi bawić sie piłką. Gdy przychodzę ze szkoły radośnie mnie wita szczekając. Borysa zabieram wszędzie gdzie mogę.Jest moim wiernym towarzyszem. Gdy pada deszcz bardzo się smuce, ponieważ nie mogę z nim pobawić lub wyjść na spacer.Gdy jest ciepło uwielbia gdy naleję mu zimnej wody do miski aby się ochłodził.Moim zdaniem warto zawsze mieć u boku takiego przyjaciela.Nigdy Cię nie opuści i zawsze będzie wiernym towarzyszem zabaw.",
+                        Category = "Pies",
+                        City = "Wroclaw",
+                        Picture = "dog2.jpg",
+                        AddDate = new DateTime(2019, 3, 15, 21, 22, 22),
+                        PostCode = "54-234",
+                        Phone = "923341233",
+                        Street = "Leśna",
+                        Sex = true,
+                        Activity = "Kanapowiec",
+                        Size = "Duży",
+                        Age = 3,
+                        Status = true
+                    },
+                    new Pet
+                    {
+                        UserId = "acec25c2-4144-450d-a305-b466188be6d8",
+                        Name = "Piorun",
+                        Description = "Mój pies nazywa się Borys. Jest to duży pies rasy nowofunlad, który jest samcem. Jego maść jest brązowa.To najżadsze ubarwienie tej rasy psa.Borys lubi spacery a także jeśli rzuca mu się patyk.Jego ulubione miejsce do hasania to las na granicy Popielowa i Jankowic.Moj pies jest zwierzęciem bardzo wesołym. Dawno już przestał być szczeniakiem ale do dziś lubi bawić sie piłką. Gdy przychodzę ze szkoły radośnie mnie wita szczekając. Borysa zabieram wszędzie gdzie mogę.Jest moim wiernym towarzyszem. Gdy pada deszcz bardzo się smuce, ponieważ nie mogę z nim pobawić lub wyjść na spacer.Gdy jest ciepło uwielbia gdy naleję mu zimnej wody do miski aby się ochłodził.Moim zdaniem warto zawsze mieć u boku takiego przyjaciela.Nigdy Cię nie opuści i zawsze będzie wiernym towarzyszem zabaw.",
+                        Category = "Pies",
+                        City = "Wroclaw",
+                        Picture = "dog3.jpg",
+                        AddDate = new DateTime(2019, 3, 15, 21, 22, 22),
+                        PostCode = "54-234",
+                        Phone = "923341233",
+                        Street = "Leśna",
+                        Sex = true,
+                        Activity = "Kanapowiec",
+                        Size = "Duży",
+                        Age = 3,
+                        Status = true
+                    },
+                    new Pet
+                    {
+                        UserId = "acec25c2-4144-450d-a305-b466188be6d8",
+                        Name = "Piorun",
+                        Description = "Mój pies nazywa się Borys. Jest to duży pies rasy nowofunlad, który jest samcem. Jego maść jest brązowa.To najżadsze ubarwienie tej rasy psa.Borys lubi spacery a także jeśli rzuca mu się patyk.Jego ulubione miejsce do hasania to las na granicy Popielowa i Jankowic.Moj pies jest zwierzęciem bardzo wesołym. Dawno już przestał być szczeniakiem ale do dziś lubi bawić sie piłką. Gdy przychodzę ze szkoły radośnie mnie wita szczekając. Borysa zabieram wszędzie gdzie mogę.Jest moim wiernym towarzyszem. Gdy pada deszcz bardzo się smuce, ponieważ nie mogę z nim pobawić lub wyjść na spacer.Gdy jest ciepło uwielbia gdy naleję mu zimnej wody do miski aby się ochłodził.Moim zdaniem warto zawsze mieć u boku takiego przyjaciela.Nigdy Cię nie opuści i zawsze będzie wiernym towarzyszem zabaw.",
+                        Category = "Pies",
+                        City = "Wroclaw",
+                        Picture = "dog3.jpg",
+                        AddDate = new DateTime(2019, 3, 15, 21, 22, 22),
+                        PostCode = "54-234",
+                        Phone = "923341233",
+                        Street = "Leśna",
+                        Sex = true,
+                        Activity = "Kanapowiec",
+                        Size = "Duży",
+                        Age = 3,
+                        Status = true
+                    },
+                    new Pet
+                    {
+                        UserId = "acec25c2-4144-450d-a305-b466188be6d8",
+                        Name = "Piorun",
+                        Description = "Mój pies nazywa się Borys. Jest to duży pies rasy nowofunlad, który jest samcem. Jego maść jest brązowa.To najżadsze ubarwienie tej rasy psa.Borys lubi spacery a także jeśli rzuca mu się patyk.Jego ulubione miejsce do hasania to las na granicy Popielowa i Jankowic.Moj pies jest zwierzęciem bardzo wesołym. Dawno już przestał być szczeniakiem ale do dziś lubi bawić sie piłką. Gdy przychodzę ze szkoły radośnie mnie wita szczekając. Borysa zabieram wszędzie gdzie mogę.Jest moim wiernym towarzyszem. Gdy pada deszcz bardzo się smuce, ponieważ nie mogę z nim pobawić lub wyjść na spacer.Gdy jest ciepło uwielbia gdy naleję mu zimnej wody do miski aby się ochłodził.Moim zdaniem warto zawsze mieć u boku takiego przyjaciela.Nigdy Cię nie opuści i zawsze będzie wiernym towarzyszem zabaw.",
+                        Category = "Pies",
+                        City = "Wroclaw",
+                        Picture = "dog2.jpg",
+                        AddDate = new DateTime(2019, 3, 15, 21, 22, 22),
+                        PostCode = "54-234",
+                        Phone = "923341233",
+                        Street = "Leśna",
+                        Sex = true,
+                        Activity = "Kanapowiec",
+                        Size = "Duży",
+                        Age = 3,
+                        Status = true
                     }
-                    );
+                );
                 context.SaveChanges();
             }
         }

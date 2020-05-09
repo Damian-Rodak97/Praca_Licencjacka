@@ -31,12 +31,46 @@
                         <p>
                             <label asp-for="Category">Kategoria</label>
                             <div><span asp-validation-for="Category" class="text-danger"></span></div>
-                            <input asp-for="Category" class="form-control" />
+                            <select class="custom-select mr-sm-2" asp-for="Category">
+                                <option selected>Wybierz...</option>
+                                <option value="Pies">Pies</option>
+                                <option value="Kot">Kot</option>
+                            </select>
                         </p>
                         <p>
-                            <label asp-for="AddDate">Data Dodania</label>
-                            <div><span asp-validation-for="AddDate" class="text-danger"></span></div>
-                            <input asp-for="AddDate" class="form-control" type="datetime-local" />
+                            <label asp-for="Sex">Płeć</label>
+                            <div><span asp-validation-for="Sex" class="text-danger"></span></div>
+                            <select class="custom-select mr-sm-2" asp-for="Sex">
+                                <option selected>Wybierz...</option>
+                                <option value="true">Samiec</option>
+                                <option value="false">Samica</option>
+                            </select>
+                        </p>
+                        <p>
+                            <label asp-for="Activity">Aktywność</label>
+                            <div><span asp-validation-for="Activity" class="text-danger"></span></div>
+                            <select class="custom-select mr-sm-2" asp-for="Activity">
+                                <option selected>Wybierz...</option>
+                                <option value="Kanapowiec">Kanapowiec</option>
+                                <option value="Średnio aktywny">Średnio Aktywny</option>
+                                <option value="Bardzo aktywny">Bardzo Aktywny</option>
+                            </select>
+                        </p>
+                        <p>
+                            <label asp-for="Size">Wielkość</label>
+                            <div><span asp-validation-for="Size" class="text-danger"></span></div>
+                            <select asp-for="Size" class="custom-select mr-sm-2" >
+                                <option selected>Wybierz...</option>
+                                <option value="Mały">Mały</option>
+                                <option value="Średni">Średni</option>
+                                <option value="Duży">Duży</option>
+                            </select>
+                        </p>
+                        <p>
+                            <label asp-for="Age">Wiek</label>
+                            <div><span asp-validation-for="Age" class="text-danger"></span></div>
+                            <input asp-for="Age" class="form-control" type="number" />
+
                         </p>
                         <p>
                             <label asp-for="Photo">Zdjęcie</label>
@@ -50,15 +84,20 @@
                             <button class="btn btn-primary mx-2" type="submit">Dodaj do Adopcji</button>
                             <a asp-action="Index" class="btn btn-secondary">Anuluj</a>
                         </div>
-                        <script>
-                            $(document).ready(function () {
-                                $('.custom-file-input').on("change",
-                                    function () {
-                                        var fileName = $(this).val().split("\\").pop();
-                                        $(this).next('.custom-file-label').html(fileName);
-                                    });
-                            })
-                        </script>
+                <script>
+                    $(document).ready(function () {
+                        $('.custom-file-input').on("change",
+                            function () {
+                                var fileName = $(this).val().split("\\").pop();
+                                $(this).next('.custom-file-label').html(fileName);
+                            });
+                    })
+                </script>
+                <script type="text/javascript">
+                    $(function () {
+                        $('#datetimepicker1').datetimepicker();
+                    });
+                </script>
                     </form>
                 </div>
             </div>

@@ -31,6 +31,10 @@ namespace AdoptujZwierzaka.Models
                     dbEntryPet.Category = pet.Category;
                     dbEntryPet.City = pet.City;
                     dbEntryPet.Picture = pet.Picture;
+                    dbEntryPet.Sex = pet.Sex;
+                    dbEntryPet.Activity = pet.Activity;
+                    dbEntryPet.Size = pet.Size;
+                    dbEntryPet.Age = pet.Age;
                 }
             }
             context.SaveChanges();
